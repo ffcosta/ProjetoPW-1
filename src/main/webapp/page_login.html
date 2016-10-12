@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
- <html lang="en" ng-app="login">
+ <html lang="en">
 <head>
-	<title>Login | Unify - Responsive Website Template</title>
+	<title>Login</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -17,7 +17,7 @@
 	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
 	<!-- CSS Global Compulsory -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 
 	<!-- CSS Header and Footer -->
@@ -39,11 +39,12 @@
 	<!-- CSS Customization -->
 	<link rel="stylesheet" href="assets/css/custom.css">
 	
+	<link rel="stylesheet" href="lib/css/estilo.css">
 	<script src="lib/js/jquery/jquery.js"></script>
 	<script src="lib/js/script/script.js"></script>
 </head>
 
-<body ng-controller="loginCtrl">
+<body>
 	<div class="wrapper">
 		<!--=== Header ===-->
 		<div class="header">
@@ -70,7 +71,7 @@
 						<li class="topbar-devider"></li>
 						<li><a href="page_faq.html">Ajuda</a></li>
 						<li class="topbar-devider"></li>
-						<li><a href="page_login.html">Login</a></li>
+						<li><a href="page_login.html">Logar</a></li>
 					</ul>
 				</div>
 				<!-- End Topbar -->
@@ -897,18 +898,29 @@
 			<div class="footer">
 				<div class="container">
 					<div class="row">
-						<!-- About -->
-						<div class="col-md-3 md-margin-bottom-40">
-							<a href="index.html"><img id="logo-footer" class="footer-logo" src="assets/img/logo2-default.png" alt=""></a>
-							<p>About Unify dolor sit amet, consectetur adipiscing elit. Maecenas eget nisl id libero tincidunt sodales.</p>
-							<p>Duis eleifend fermentum ante ut aliquam. Cras mi risus, dignissim sed adipiscing ut, placerat non arcu.</p>
-						</div><!--/col-md-3-->
-						<!-- End About -->
+						<!-- Início Newstler -->
+						<div class="col-md-3 md-margin-bottom-40 newstler text-justify">
+							<div class="text-center">
+								<h2><strong>NEWSTLER</strong></h2>
+							</div>
+							<p>Prometemos não utilizar as suas informações para o envio de nenhum tipo de SPAM.</p>
+							
+							<form>
+								<input class="form-control" type="text" name="nome" placeholder="NOME">
+								<br>
+								<input class="form-control" type="text" name="email" placeholder="EMAIL">
+								<br>
+								<input class="form-control" type="button" name="enviar" value="ENVIAR">
+							</form>
+						</div>
+						<!-- Fim Newstler -->
 
-						<!-- Latest -->
+						<!-- Início Últimos Eventos -->
 						<div class="col-md-3 md-margin-bottom-40">
 							<div class="posts">
-								<div class="headline"><h2>Latest Posts</h2></div>
+								<div>
+									<h2><strong>ÚLTIMOS EVENTOS</strong></h2>
+								</div>
 								<ul class="list-unstyled latest-list">
 									<li>
 										<a href="#">Incredible content</a>
@@ -922,47 +934,57 @@
 										<a href="#">New Terms and Conditions</a>
 										<small>September 15, 2014</small>
 									</li>
+									<li>
+										<a href="#">New Terms and Conditions</a>
+										<small>September 15, 2014</small>
+									</li>
 								</ul>
 							</div>
-						</div><!--/col-md-3-->
-						<!-- End Latest -->
+						</div>
+						<!-- Fim Últimos eventos -->
 
-						<!-- Link List -->
+						<!-- Início Links Úteis -->
 						<div class="col-md-3 md-margin-bottom-40">
-							<div class="headline"><h2>Useful Links</h2></div>
+							<div>
+								<h2><strong>LINKS ÚTEIS</strong></h2>
+							</div>
 							<ul class="list-unstyled link-list">
-								<li><a href="#">About us</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Portfolio</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Community</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Contact us</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="index.html">Home</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Quem somos</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Eventos anteriores</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Trabalhe conosco</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Comunidade</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Contato</a><i class="fa fa-angle-right"></i></li>
 							</ul>
 						</div><!--/col-md-3-->
-						<!-- End Link List -->
+						<!-- Fim Links Úteis -->
 
-						<!-- Address -->
+						<!-- Início Fale Conosco -->
 						<div class="col-md-3 map-img md-margin-bottom-40">
-							<div class="headline"><h2>Contact Us</h2></div>
+							<div><h2><strong>FALE CONOSCO</strong></h2></div>
 							<address class="md-margin-bottom-40">
-								25, Lorem Lis Street, Orange <br />
-								California, US <br />
-								Phone: 800 123 3456 <br />
-								Fax: 800 123 3456 <br />
-								Email: <a href="mailto:info@anybiz.com" class="">info@anybiz.com</a>
+								Alameda Palmeiras, s/n <br/>
+								Câmpus Samambaia, Goiânia - GO <br/>
+								CEP : 74690-900 <br/>
+								Fone: (62) 6666-6666 <br/>
+								Email: <a href="#" class="">sportsgo@inf.ufg.br</a>
 							</address>
-						</div><!--/col-md-3-->
-						<!-- End Address -->
+							<br><br><br><br>
+						</div>
+						<!-- Fim Fale Conosco -->
+
 					</div>
+
 				</div>
-			</div><!--/footer-->
+			</div>
 
 			<div class="copyright">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
 							<p>
-								2016 &copy; All Rights Reserved.
-								<a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+								2016 &copy; Todos os direitos Reservados.
+								<a href="#">Politica de Privacidade</a> | <a href="#">Termos de Serviço</a>
 							</p>
 						</div>
 
@@ -1013,6 +1035,7 @@
 		</div>
 		<!--=== End Footer Version 1 ===-->
 	</div><!--/wrapper-->
+
 
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>

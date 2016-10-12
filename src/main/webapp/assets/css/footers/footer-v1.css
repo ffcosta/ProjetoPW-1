@@ -70,6 +70,10 @@
 	font-size: 16px;
 }
 
+.footer-v1 .footer-socials li a:hover{
+	color : #CD5C5C;
+}
+
 @media (max-width: 991px) {
 	.footer-v1 .copyright,
 	.footer-v1 .footer-socials {
