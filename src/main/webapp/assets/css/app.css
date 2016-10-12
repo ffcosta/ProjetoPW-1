@@ -204,7 +204,7 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
 	content: " ";
 	margin-left: -35px;
 	position: absolute;
-	background: #72c02c;
+	background: #CD5C5C;
 }
 
 .title-v1 p {
@@ -336,7 +336,7 @@ h3.title-v3-xs {
 	margin-left: -15px;
 	text-align: center;
 	position: absolute;
-	background: #72c02c;
+	background: #CD5C5C;
 }
 
 .headline-center p {
@@ -440,7 +440,7 @@ h3.title-v3-xs {
 	content: " ";
 	bottom: -5px;
 	position: absolute;
-	background: #72c02c;
+	background: #CD5C5C;
 }
 
 /*Headline v2
@@ -579,7 +579,7 @@ h3.heading-xs {
 	font-weight: 400;
 	padding: 6px 13px;
 	position: relative;
-	background: #72c02c;
+	background: #CD5C5C;
 	white-space: nowrap;
 	display: inline-block;
 	text-decoration: none;
@@ -652,10 +652,10 @@ a.btn-u-xs {
 .btn-u:active,
 .btn-u.active,
 .open .dropdown-toggle.btn-u {
-	background: #5fb611;
+	background: #CD5C5C;
 }
 .btn-u-split.dropdown-toggle {
-	border-left: solid 1px #5fb611;
+	border-left: solid 1px #CD5C5C;
 }
 
 .btn-u.btn-u-blue {

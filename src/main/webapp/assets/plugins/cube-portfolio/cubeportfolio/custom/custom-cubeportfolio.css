@@ -63,15 +63,15 @@
 
 .cube-portfolio .cbp-l-filters-text .cbp-filter-item.cbp-filter-item-active,
 .cube-portfolio .cbp-l-filters-text .cbp-filter-item:hover {
-	color: #72c02c;
+	color: #CD5C5C;
 }
 
 .cube-portfolio .cbp-l-filters-text .cbp-filter-counter {
-	background: #72c02c;
+	background: #CD5C5C;
 }
 
 .cube-portfolio .cbp-l-filters-text .cbp-filter-counter:before {
-	border-top-color: #72c02c;
+	border-top-color: #CD5C5C;
 }
 
 /*Pagination*/
@@ -82,12 +82,12 @@
 /*Buttons*/
 .cube-portfolio .cbp-l-caption-buttonLeft,
 .cube-portfolio .cbp-l-caption-buttonRight {
-	background: #72c02c;
+	background: #CD5C5C;
 }
 
 .cube-portfolio .cbp-l-caption-buttonLeft:hover,
 .cube-portfolio .cbp-l-caption-buttonRight:hover {
-	background: #5fb611;
+	background: #CD5C5C;
 }
 
 /*Titles*/
@@ -141,7 +141,7 @@
 
 .cube-portfolio .link-captions li i:hover {
 	color: #fff;
-	background: #72c02c;
+	background: #CD5C5C;
 	-webkit-transition: all .2s ease-in-out;
   	-moz-transition: all .2s ease-in-out;
   	-o-transition: all .2s ease-in-out;

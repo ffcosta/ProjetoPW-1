@@ -24,7 +24,27 @@
 }
 .back{
 	background : white;
+	color : ;
 }
-.wrapper-fut{
-	background : #426F42;
+
+.font{
+	font-size : 20px;
 }
+
+.newstler input[type="button"]{
+	background-color : #696969;
+	color : white;
+	border : transparent;
+}
+.newstler input[type="button"]:hover{
+	opacity : 0.9;
+}
+.img-esportes img{
+	width : 100%;
+	margin : auto;
+}
+.color-red{
+	color : #CD5C5C;
+}
+
+

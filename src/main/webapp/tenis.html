@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<html lang="en"> 
 <head>
-	<title>Sports GO</title>
+	<title>Futebol</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -11,14 +10,17 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
+	<!-- CSS Estilo -->
+	<link rel="stylesheet" href="lib/css/estilo.css">
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- Web Fonts -->
-	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
 
 	<!-- CSS Global Compulsory -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 
 	<!-- CSS Header and Footer -->
@@ -29,8 +31,8 @@
 	<link rel="stylesheet" href="assets/plugins/animate.css">
 	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
 	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="assets/plugins/parallax-slider/css/parallax-slider.css">
-	<link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+	<link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+	<link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
 
 	<!-- CSS Theme -->
 	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
@@ -38,14 +40,12 @@
 
 	<!-- CSS Customization -->
 	<link rel="stylesheet" href="assets/css/custom.css">
-
-	<!-- CSS Estilo -->
-	<link rel="stylesheet" href="lib/css/estilo.css">
+	
 
 </head>
 
-<body>
-	<div class="back wrapper">
+<body class="header-fixed">
+	<div>
 		<!--=== Header ===-->
 		<div class="header">
 			<div class="container">
@@ -88,57 +88,17 @@
 			<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
 				<div class="container">
 					<ul class="nav navbar-nav">
-						
-						<!-- ESPORTES -->
-						
-						<li class="dropdown active">
-							
-							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Esportes</a>
-							
+						<!-- Home -->
+						<li class="dropdown">
+							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+								Esportes
+							</a>
 							<ul class="dropdown-menu">
-							
-							    <!--Pagina inicial -->
-								<li class="active"><a href="index.html">Página Inicial</a></li>
-                                <!--Pagina inicial -->
-                                
-								<!-- FutebolPAG -->
-								<li class="dropdown-submenu">
-									<a href="portfolio_single_item.html">
-										<img class="menu-categoria" src="lib/img/bola.png"/>
-										Futebol
-									</a>
-									<ul class="dropdown-menu">
-										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_dark.html">- One Page Dark Option</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home1.html">- One Page Option 1</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home2.html">- One Page Option 2</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home3.html">- One Page Option 3</a></li>
-									</ul>
-								</li>
-								<!-- FutebolPAG -->
-								
-								<!-- BasquetebolPAG -->
-								<li class="dropdown-submenu">
-									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/basquete.png"/>
-										Basquetebol
-									</a>
-									<ul class="dropdown-menu">
-										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_dark.html">- One Page Dark Option</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home1.html">- One Page Option 1</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home2.html">- One Page Option 2</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home3.html">- One Page Option 3</a></li>
-									</ul>
-								</li>
-								<!-- BasquetebolPAG -->
+								<li><a href="index.html">Option 1: Default Page</a></li>
 
-								<!-- VoleibolPAG -->
+								<!-- One Page -->
 								<li class="dropdown-submenu">
-									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/volei.png"/>
-										Voleibol
-									</a>
+									<a href="javascript:void(0);">Option 2: One Page</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
 										<li><a target="_blank" href="One-Pages/Classic/one_page_dark.html">- One Page Dark Option</a></li>
@@ -147,89 +107,96 @@
 										<li><a target="_blank" href="One-Pages/Classic/one_page_home3.html">- One Page Option 3</a></li>
 									</ul>
 								</li>
-								<!-- VoleibolPAG -->
+								<!-- End One Page -->
 
-								<!-- NataçãoPAG -->
+								<!-- Shop UI Page -->
 								<li class="dropdown-submenu">
-									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/natacao.png"/>
-										Natação
-									</a>
+									<a href="javascript:void(0);">Option 3: Shop UI</a>
 									<ul class="dropdown-menu">
-										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_dark.html">- One Page Dark Option</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home1.html">- One Page Option 1</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home2.html">- One Page Option 2</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home3.html">- One Page Option 3</a></li>
+										<li><a target="_blank" href="E-Commerce/index.html">- Home Page</a></li>
+										<li><a target="_blank" href="E-Commerce/shop-ui-inner.html">- Product Page</a></li>
+										<li><a target="_blank" href="E-Commerce/shop-ui-filter-grid.html">- Filter Grid Page</a></li>
+										<li><a target="_blank" href="E-Commerce/shop-ui-filter-list.html">- Filter List Page</a></li>
+										<li><a target="_blank" href="E-Commerce/shop-ui-add-to-cart.html">- Checkout Page</a></li>
+										<li><a target="_blank" href="E-Commerce/shop-ui-login.html">- Login Page</a></li>
+										<li><a target="_blank" href="E-Commerce/shop-ui-register.html">- Registration Page</a></li>
 									</ul>
 								</li>
-								<!-- NataçãoPAG -->
-								
-								<!-- TenisPAG -->
-								<li class="dropdown-submenu">
-									<a href="tenis.html">
-										<img class="menu-categoria" src="lib/img/tenis.png"/>
-										Tênis
-									</a>
-									<ul class="dropdown-menu">
-										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_dark.html">- One Page Dark Option</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home1.html">- One Page Option 1</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home2.html">- One Page Option 2</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home3.html">- One Page Option 3</a></li>
-									</ul>
-								</li>
-								<!-- TenisPAG -->
-								
-								<!-- CorridaPAG -->
-								<li class="dropdown-submenu">
-									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/corrida.png"/>
-										Corridas
-									</a>
-									<ul class="dropdown-menu">
-										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_dark.html">- One Page Dark Option</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home1.html">- One Page Option 1</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home2.html">- One Page Option 2</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home3.html">- One Page Option 3</a></li>
-									</ul>
-								</li>
-								<!-- CorridaPAG -->
-								
-								<!-- SkatePAG -->
-								<li class="dropdown-submenu">
-									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/skate.png"/>
-										Skate
-									</a>
-									<ul class="dropdown-menu">
-										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_dark.html">- One Page Dark Option</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home1.html">- One Page Option 1</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home2.html">- One Page Option 2</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home3.html">- One Page Option 3</a></li>
-									</ul>
-								</li>
-								<!-- SkatePAG -->
-								
-								<!-- AirSoftPAG -->
-								<li class="dropdown-submenu">
-									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/airsoft.png"/>
-										Air Soft
-									</a>
-									<ul class="dropdown-menu">
-										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_dark.html">- One Page Dark Option</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home1.html">- One Page Option 1</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home2.html">- One Page Option 2</a></li>
-										<li><a target="_blank" href="One-Pages/Classic/one_page_home3.html">- One Page Option 3</a></li>
-									</ul>
-								</li>
-								<!-- AirSoftPAG -->
+								<!-- End Shop UI -->
 
-								
+								<!-- Blog Template -->
+								<li class="dropdown-submenu">
+									<a href="javascript:void(0);">Option 4: Blog Template</a>
+									<ul class="dropdown-menu">
+										<li><a target="_blank" href="Blog-Magazine/index.html">- Home Page</a></li>
+										<li class="dropdown-submenu">
+											<a href="javascript:void(0);">- Blog Page Layouts</a>
+											<ul class="dropdown-menu">
+												<li><a target="_blank" href="Blog-Magazine/blog_page_layouts1.html">Page Layouts v1</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_page_layouts2.html">Page Layouts v2</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_page_layouts3.html">Page Layouts v3</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_page_layouts4.html">Page Layouts v4</a></li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a href="javascript:void(0);">- Blog Post Layouts</a>
+											<ul class="dropdown-menu">
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts1.html">Post Layout v1</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts2.html">Post Layout v2</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts3.html">Post Layout v3</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts4.html">Post Layout v4</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts5.html">Post Layout v5</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts6.html">Post Layout v6</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts7.html">Post Layout v7</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts8.html">Post Layout v8</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts9.html">Post Layout v9</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts_ls.html">Left Sidebar Example</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_post_layouts_fw.html">Full Width Example</a></li>
+											</ul>
+										</li>
+										<li class="dropdown-submenu">
+											<a href="javascript:void(0);">- Grid Layouts</a>
+											<ul class="dropdown-menu">
+												<li><a target="_blank" href="Blog-Magazine/blog_grid_1.html">Grid: 1 Col</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_grid_2.html">Grid: 2 Col</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_grid_3.html">Grid: 3 Col</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_grid_4.html">Grid: 4 Col</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_grid_4_fw.html">Grid: Full Width (4 Col)</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_grid_2_rs.html">Grid: Right Sidebar (2 Col)</a></li>
+												<li><a target="_blank" href="Blog-Magazine/blog_grid_2_ls.html">Grid: Left Sidebar (2 Col)</a></li>
+											</ul>
+										</li>
+										<li><a target="_blank" href="Blog-Magazine/blog_single.html">- Single Page</a></li>
+										<li><a target="_blank" href="Blog-Magazine/blog_home_boxed.html">- Home Boxed Page</a></li>
+										<li><a target="_blank" href="Blog-Magazine/blog_home_boxed_space.html">- Home Boxed Space Page</a></li>
+									</ul>
+								</li>
+								<!-- End Blog Template -->
+
+								<li><a href="page_home8.html">Option 5: Home Discover</a></li>
+								<li><a href="page_home14.html">Option 6: Home Incredible</a></li>
+								<li><a href="page_home9.html">Option 7: Home Creative</a></li>
+								<li><a href="page_home10.html">Option 8: Home Inspire</a></li>
+								<li><a href="page_home15.html">Option 9: Home Aspire</a></li>
+								<li><a href="page_home11.html">Option 10: Home Desire</a></li>
+								<li><a href="page_home17.html">Option 11: Home Allure</a></li>
+								<li><a href="page_jobs.html">Option 12: Home Jobs</a></li>
+								<li><a href="page_home3.html">Option 13: Amazing Content</a></li>
+								<li><a href="page_home6.html">Option 14: Home Magazine</a></li>
+								<li class="dropdown-submenu">
+									<a href="javascript:void(0);">Option 15: Home Sidebar</a>
+									<ul class="dropdown-menu">
+										<li><a href="page_home12.html">- Home Left Sidebar</a></li>
+										<li><a href="page_home13.html">- Home Right Sidebar</a></li>
+									</ul>
+								</li>
+								<li><a href="page_home1.html">Option 16: Home Basic v1</a></li>
+								<li><a href="page_home2.html">Option 17: Home Basic v2</a></li>
+								<li><a href="page_home5.html">Option 18: Home Basic v3</a></li>
+								<li><a href="page_home4.html">Option 19: Home Basic v4</a></li>
+								<li><a href="page_home7.html">Option 20: Home Basic v5</a></li>
+								<li><a href="page_home16.html">Option 21: Home Basic v6</a></li>
+								<li><a href="page_home18.html">Option 22: Home Basic v7</a></li>
 							</ul>
 						</li>
 						<!-- End Home -->
@@ -514,7 +481,7 @@
 						<!-- Blog -->
 						<li class="dropdown">
 							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-								Blog
+								Notícias
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-submenu">
@@ -560,7 +527,7 @@
 						<!-- Portfolio -->
 						<li class="dropdown">
 							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-								Portfolio
+								Contato
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-submenu">
@@ -618,10 +585,10 @@
 									</ul>
 								</li>
 								<li><a href="portfolio_hover_colors.html">Portfolio Hover Colors</a></li>
-								<li class="dropdown-submenu">
+								<li class="dropdown-submenu active">
 									<a href="javascript:void(0);">Portfolio Items</a>
 									<ul class="dropdown-menu">
-										<li><a href="portfolio_single_item.html">Single Item</a></li>
+										<li class="active"><a href="portfolio_single_item.html">Single Item</a></li>
 										<li><a href="portfolio_old_item.html">Basic Item 1</a></li>
 										<li><a href="portfolio_old_item1.html">Basic Item 2</a></li>
 									</ul>
@@ -639,195 +606,7 @@
 						</li>
 						<!-- End Portfolio -->
 
-						<!-- Features -->
-						<li class="dropdown">
-							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-								Features
-							</a>
-							<ul class="dropdown-menu">
-								<li class="dropdown-submenu">
-									<a href="javascript:void(0);">Headers</a>
-									<ul class="dropdown-menu">
-										<li><a href="feature_header_default.html">Header Default</a></li>
-										<li><a href="feature_header_default_no_topbar.html">Header Default without Topbar</a></li>
-										<li><a href="feature_header_default_centered.html">Header Default Centered</a></li>
-										<li><a href="feature_header_default_fixed.html">Header Default Fixed (Sticky)</a></li>
-										<li><a href="feature_header_default_login_popup.html">Header Default Login Popup</a></li>
-										<li><a href="feature_header_v1.html">Header v1</a></li>
-										<li><a href="feature_header_v2.html">Header v2</a></li>
-										<li><a href="feature_header_v3.html">Header v3</a></li>
-										<li><a href="feature_header_v4.html">Header v4</a></li>
-										<li><a href="feature_header_v4_logo_centered.html">Header v4 Centered Logo</a></li>
-										<li><a href="feature_header_v5.html">Header v5</a></li>
-										<li><a href="feature_header_v6_transparent.html">Header v6 Transparent</a></li>
-										<li><a href="feature_header_v6_semi_dark_transparent.html">Header v6 Dark Transparent</a></li>
-										<li><a href="feature_header_v6_semi_white_transparent.html">Header v6 White Transparent</a></li>
-										<li><a href="feature_header_v6_border_bottom.html">Header v6 Border Bottom</a></li>
-										<li><a href="feature_header_v6_classic_dark.html">Header v6 Classic Dark</a></li>
-										<li><a href="feature_header_v6_classic_white.html">Header v6 Classic White</a></li>
-										<li><a href="feature_header_v6_dark_dropdown.html">Header v6 Dark Dropdown</a></li>
-										<li><a href="feature_header_v6_dark_scroll.html">Header v6 Dark on Scroll</a></li>
-										<li><a href="feature_header_v6_dark_search.html">Header v6 Dark Search</a></li>
-										<li><a href="feature_header_v6_dark_res_nav.html">Header v6 Dark in Responsive</a></li>
-										<li><a href="page_home12.html">Header v7 Left Sidebar</a></li>
-										<li><a href="page_home13.html">Header v7 Right Sidebar</a></li>
-										<li><a href="feature_header_v8.html">Header v8</a></li>
-									</ul>
-								</li>
-								<li class="dropdown-submenu">
-									<a href="javascript:void(0);">Footers</a>
-									<ul class="dropdown-menu">
-										<li><a href="feature_footer_default.html#footer-default">Footer Default</a></li>
-										<li><a href="feature_footer_v1.html#footer-v1">Footer v1</a></li>
-										<li><a href="feature_footer_v2.html#footer-v2">Footer v2</a></li>
-										<li><a href="feature_footer_v3.html#footer-v3">Footer v3</a></li>
-										<li><a href="feature_footer_v4.html#footer-v4">Footer v4</a></li>
-										<li><a href="feature_footer_v5.html#footer-v5">Footer v5</a></li>
-										<li><a href="feature_footer_v6.html#footer-v6">Footer v6</a></li>
-										<li><a href="feature_footer_v7.html#footer-v7">Footer v7</a></li>
-										<li><a href="feature_footer_v8.html#footer-v8">Footer v8</a></li>
-									</ul>
-								</li>
-								<li><a href="feature_gallery.html">Gallery Examples</a></li>
-								<li><a href="feature_animations.html">Animations on Scroll</a></li>
-								<li><a href="feature_parallax_counters.html">Parallax Counters</a></li>
-								<li><a href="feature_testimonials_quotes.html">Testimonials and Quotes</a></li>
-								<li><a href="feature_icon_blocks.html">Icon Blocks</a></li>
-								<li><a href="feature_team_blocks.html">Team Blocks</a></li>
-								<li><a href="feature_news_blocks.html">News Blocks</a></li>
-								<li><a href="feature_parallax_blocks.html">Parallax Blocks</a></li>
-								<li><a href="feature_funny_boxes.html">Funny Boxes</a></li>
-								<li><a href="feature_call_to_actions.html">Call To Action</a></li>
-							</ul>
-						</li>
-						<!-- End Features -->
-
-						<!-- Shortcodes -->
-						<li class="dropdown mega-menu-fullwidth">
-							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-								Shortcodes
-							</a>
-							<ul class="dropdown-menu">
-								<li>
-									<div class="mega-menu-content disable-icons">
-										<div class="container">
-											<div class="row equal-height">
-												<div class="col-md-3 equal-height-in">
-													<ul class="list-unstyled equal-height-list">
-														<li><h3>Typography &amp; Components</h3></li>
-
-														<!-- Typography -->
-														<li><a href="shortcode_typo_general.html"><i class="fa fa-sort-alpha-asc"></i> General Typography</a></li>
-														<li><a href="shortcode_typo_headings.html"><i class="fa fa-magic"></i> Headings Options</a></li>
-														<li><a href="shortcode_typo_dividers.html"><i class="fa fa-ellipsis-h"></i> Dividers</a></li>
-														<li><a href="shortcode_typo_blockquote.html"><i class="fa fa-quote-left"></i> Blockquote Blocks</a></li>
-														<li><a href="shortcode_typo_boxshadows.html"><i class="fa fa-asterisk"></i> Box Shadows</a></li>
-														<li><a href="shortcode_typo_testimonials.html"><i class="fa fa-comments"></i> Testimonials</a></li>
-														<li><a href="shortcode_typo_tagline_boxes.html"><i class="fa fa-tasks"></i> Tagline Boxes</a></li>
-														<li><a href="shortcode_typo_grid.html"><i class="fa fa-align-justify"></i> Grid Layouts</a></li>
-														<!-- End Typography -->
-
-														<!-- Components -->
-														<li><a href="shortcode_compo_messages.html"><i class="fa fa-comment"></i> Alerts &amp; Messages</a></li>
-														<li><a href="shortcode_compo_labels.html"><i class="fa fa-tags"></i> Labels &amp; Badges</a></li>
-														<li><a href="shortcode_compo_media.html"><i class="fa fa-volume-down"></i> Audio/Videos &amp; Images</a></li>
-														<li><a href="shortcode_compo_pagination.html"><i class="fa fa-arrows-h"></i> Paginations</a></li>
-														<!-- End Components -->
-													</ul>
-												</div>
-												<div class="col-md-3 equal-height-in">
-													<ul class="list-unstyled equal-height-list">
-														<li><h3>Buttons &amp; Icons</h3></li>
-
-														<!-- Buttons -->
-														<li><a href="shortcode_btn_general.html"><i class="fa fa-flask"></i> General Buttons</a></li>
-														<li><a href="shortcode_btn_brands.html"><i class="fa fa-html5"></i> Brand &amp; Social Buttons</a></li>
-														<li><a href="shortcode_btn_effects.html"><i class="fa fa-bolt"></i> Loading &amp; Hover Effects</a></li>
-														<!-- End Buttons -->
-
-														<!-- Icons -->
-														<li><a href="shortcode_icon_general.html"><i class="fa fa-chevron-circle-right"></i> General Icons</a></li>
-														<li><a href="shortcode_icon_fa.html"><i class="fa fa-chevron-circle-right"></i> Font Awesome Icons</a></li>
-														<li><a href="shortcode_icon_line.html"><i class="fa fa-chevron-circle-right"></i> Line Icons</a></li>
-														<li><a href="shortcode_icon_line_christmas.html"><i class="fa fa-chevron-circle-right"></i> Line Icons Pro</a></li>
-														<li><a href="shortcode_icon_glyph.html"><i class="fa fa-chevron-circle-right"></i> Glyphicons Icons (Bootstrap)</a></li>
-														<!-- End Icons -->
-													</ul>
-												</div>
-												<div class="col-md-3 equal-height-in">
-													<ul class="list-unstyled equal-height-list">
-														<li><h3>Common elements</h3></li>
-
-														<!-- Common Elements -->
-														<li><a href="shortcode_thumbnails.html"><i class="fa fa-image"></i> Thumbnails</a></li>
-														<li><a href="shortcode_accordion_and_tabs.html"><i class="fa fa-list-ol"></i> Accordion &amp; Tabs</a></li>
-														<li><a href="shortcode_timeline1.html"><i class="fa fa-dot-circle-o"></i> Timeline Option 1</a></li>
-														<li><a href="shortcode_timeline2.html"><i class="fa fa-dot-circle-o"></i> Timeline Option 2</a></li>
-														<li><a href="shortcode_table_general.html"><i class="fa fa-table"></i> Tables</a></li>
-														<li><a href="shortcode_compo_progress_bars.html"><i class="fa fa-align-left"></i> Progress Bars</a></li>
-														<li><a href="shortcode_compo_panels.html"><i class="fa fa-columns"></i> Panels</a></li>
-														<li><a href="shortcode_carousels.html"><i class="fa fa-sliders"></i> Carousel Examples</a></li>
-														<li><a href="shortcode_maps_google.html"><i class="fa fa-map-marker"></i> Google Maps</a></li>
-														<li><a href="shortcode_maps_vector.html"><i class="fa fa-align-center"></i> Vector Maps</a></li>
-														<!-- End Common Elements -->
-													</ul>
-												</div>
-												<div class="col-md-3 equal-height-in">
-													<ul class="list-unstyled equal-height-list">
-														<li><h3>Forms &amp; Infographics</h3></li>
-
-														<!-- Forms -->
-														<li><a href="shortcode_form_general.html"><i class="fa fa-bars"></i> Common Bootstrap Forms</a></li>
-														<li><a href="shortcode_form_general1.html"><i class="fa fa-bars"></i> General Unify Forms</a></li>
-														<li><a href="shortcode_form_advanced.html"><i class="fa fa-bars"></i> Advanced Forms</a></li>
-														<li><a href="shortcode_form_layouts.html"><i class="fa fa-bars"></i> Form Layouts</a></li>
-														<li><a href="shortcode_form_layouts_advanced.html"><i class="fa fa-bars"></i> Advanced Layout Forms</a></li>
-														<li><a href="shortcode_form_states.html"><i class="fa fa-bars"></i> Form States</a></li>
-														<li><a href="shortcode_form_sliders.html"><i class="fa fa-bars"></i> Form Sliders</a></li>
-														<li><a href="shortcode_form_modals.html"><i class="fa fa-bars"></i> Modals</a></li>
-														<!-- End Forms -->
-
-														<!-- Infographics -->
-														<li><a href="shortcode_compo_charts.html"><i class="fa fa-pie-chart"></i> Charts &amp; Countdowns</a></li>
-														<!-- End Infographics -->
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</li>
-						<!-- End Shortcodes -->
-
-						<!-- Demo Pages -->
-						<li class="dropdown">
-							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
-								Demos
-							</a>
-							<ul class="dropdown-menu pull-right">
-								<li><a href="One-Pages/Architecture/index.html">Architecture</a></li>
-								<li><a href="One-Pages/Travel/index.html">Travel</a></li>
-								<li><a href="One-Pages/App/index.html">Mobile App</a></li>
-								<li><a href="One-Pages/Shipping/index.html">Shipping</a></li>
-								<li><a href="One-Pages/Agency/index.html">Agency</a></li>
-								<li><a href="One-Pages/Spa/index.html">Spa</a></li>
-								<li><a href="One-Pages/Lawyer/index.html">Lawyer</a></li>
-								<li><a href="One-Pages/Business/index.html">Business</a></li>
-                <li><a href="One-Pages/Wedding/index.html">Wedding</a></li>
-                <li><a href="One-Pages/Courses/index.html">Courses</a></li>
-                <li><a href="One-Pages/Construction/index.html">Construction</a></li>
-								<li><a href="Landing-Pages/Wealth/index.html">Wealth</a></li>
-								<li><a href="Landing-Pages/Consulting/index.html">Consulting</a></li>
-								<li><a href="One-Pages/Hero-Fashion/index.html">Hero Fashion</a></li>
-								<li><a href="One-Pages/Hero-Gym/index.html">Hero Gym</a></li>
-								<li><a href="One-Pages/Hero-Photography/index.html">Hero Photography</a></li>
-								<li><a href="One-Pages/Hero-Restaurant/index.html">Hero Restaurant</a></li>
-								<li><a href="One-Pages/Hero-WebApp/index-dark.html">Hero Web App Dark</a></li>
-								<li><a href="One-Pages/Hero-WebApp/index.html">Hero Web App Light</a></li>
-							</ul>
-						</li>
-						<!-- End Demo Pages -->
+						
 
 						<!-- Search Block -->
 						<li>
@@ -848,285 +627,152 @@
 		</div>
 		<!--=== End Header ===-->
 
-		<!--=== Slider ===-->
-		<div class="slider-inner">
-			<div id="da-slider" class="da-slider">
-				<div class="da-slide">
-					<h2><i>ENCONTRE SEU ESPORTE</i> <br /> <i>RÁPIDO E FÁCIL</i> <br /> <i>EXERCITE-SE HOJE</i></h2>
-					<p><i>Inúmeros anúncios</i> <br /> <i>De esportes</i> <br /> <i>Profissionais e amadores</i>
-					<br /> <i>Para praticar e compertir</i></p>
-					<div class="da-img"><img class="img-responsive" src="assets/plugins/parallax-slider/img/1.png" alt=""></div>
-				</div>
-				<div class="da-slide">
-					<h2><i>RESPONSIVE VIDEO</i> <br /> <i>SUPPORT AND</i> <br /> <i>MANY MORE</i></h2>
-					<p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i></p>
-					<div class="da-img">
-						<iframe src="https://player.vimeo.com/video/181212513" width="530" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-					</div>
-				</div>
-				<div class="da-slide">
-					<h2><i>USING BEST WEB</i> <br /> <i>SOLUTIONS WITH</i> <br /> <i>HTML5/CSS3</i></h2>
-					<p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i> <br /> <i>veniam omnis </i></p>
-					<div class="da-img"><img src="assets/plugins/parallax-slider/img/html5andcss3.png" alt="image01" /></div>
-				</div>
-				<div class="da-arrows">
-					<span class="da-arrows-prev"></span>
-					<span class="da-arrows-next"></span>
-				</div>
-			</div>
-		</div><!--/slider-->
-		<!--=== End Slider ===-->
+
+		<br><br>
+		<div class="container back jumbotron">
+			<h1 class="text-center">
+				Tênis
+			</h1>
+		</div>
 
 
 
+		<!--=== Container Part ===-->
+		<div class="container back jumbotron">	
+			<div class="content">
+				<!-- Magazine Slider -->
+				<div class="carousel slide carousel-v2 margin-bottom-40" id="portfolio-carousel">
+					<ol class="carousel-indicators">
+						<li class="active rounded-x" data-target="#portfolio-carousel" data-slide-to="0"></li>
+						<li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="1"></li>
+						<li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="2"></li>
+					</ol>
 
-		<!--=== Content Part ===-->
-		<div class="container content-sm">
-			<!-- Recent Works -->
-			
-			<!-- Info Blokcs -->
-			<div class="row margin-bottom-30">
-				<!-- Welcome Block -->
-				<div class="col-md-8 md-margin-bottom-40">
-					<div class="headline"><h2>Bem vindo ao Sports GO</h2></div>
-					<div class="row">
-						<div class="col-sm-4">
-							<img class="img-responsive margin-bottom-20" src="assets/img/esportes-2.png" alt="">
+					<div class="carousel-inner">
+						<div class="item active">
+							<img class="full-width img-responsive" src="lib/img/tenis/tenis1.jpg" alt="">
 						</div>
-						<div class="col-sm-8">
-							<p>Sports GO foi pensado como uma ferramenta para inovar sua visão sobre esporte, oferecendo:</p>
-							<ul class="list-unstyled margin-bottom-20">
-								<li><i class="fa fa-check color-red"></i> Facilidade para praticar esportes</li>
-								<li><i class="fa fa-check color-red"></i> Novidades sobre seu esporte favorito</li>
-								<!-- <li><i class="fa fa-check color-red"></i> Responsive Bootstrap Template</li> -->
-							</ul>
+						<div class="item">
+							<img class="full-width img-responsive" src="lib/img/tenis/tenis2.jpg" alt="">
+						</div>
+						<div class="item">
+							<img class="full-width img-responsive" src="lib/img/tenis/tenis3.jpg" alt="">
 						</div>
 					</div>
 
-					<blockquote class="hero-unify">
-						<p>O Sports GO é uma idéia que surgiu da necessidade de oferecer novas ideias na forma como as pessoas podem localizar em suas cidades locais, times, notícias sobre seus esportes favoritas. Chegamos para oferecer algo novo e facilitar a vida das pessoas..</p>
-						<small>CEO, Jack Bour</small>
-					</blockquote>
-				</div><!--/col-md-8-->
+					<a class="left carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="prev">
+						<i class="fa fa-angle-left arrow-prev"></i>
+					</a>
+					<a class="right carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="next">
+						<i class="fa fa-angle-right arrow-next"></i>
+					</a>
+				</div>
+				<!-- End Magazine Slider -->
 
-				<!-- Latest Shots -->
-				<div class="col-md-4">
-					<div class="headline"><h2>Últimas Notícias</h2></div>
-					<div id="myCarousel" class="carousel slide carousel-v1">
-						<div class="carousel-inner">
-							<div class="item active">
-								<img src="assets/img/Tenis-torneio.jpg" alt="">
-								<div class="carousel-caption">
-									<p>Realizado primeiro torneio de Tenis organizado pelo Sports GO </p>
+				<div class="row margin-bottom-60 text-justify">
+					<div class="col-sm-12">
+						<div class="headline"><h2>História</h2></div>
+						<p>Antes de ser jogado com raquetes, o tênis tem suas origens em modalidades disputadas na Antiguidade apenas com a palma das mãos. Há registros de jogos disputados apenas com uma bola e as mãos desde o Egito Antigo até a Europa do século 5. Uma versão mais parecida com o tênis moderno surgiu no século 12, na Itália e na França, onde monges praticavam algo similar em pátios fechados, delimitando o espaço de jogo.</p>
+						<p>Até chegar às regras e às delimitações de quadra que possui hoje, o tênis passou por muitas mudanças. Adotado pelos aristocratas europeus, passou a dividir espaço com outra modalidade bastante praticada à época: o croquet. Tanto que um tradicional clube britânico, o All England Croquet, passou a ser chamado de All England Lawn Tennis and Croquet Club, onde até hoje é realizado o Torneio de Wimbledon.</p>
+						<p>Foi questão de tempo para a criação de entidades nacionais e da federação internacional. Com regras definidas, o primeiro torneio foi realizado em 1877, na Inglaterra. O primeiro jogador a dominar o circuito foi o britânico W. Ravenshaw, responsável por introduzir a técnica do voleio. Campeão pela primeira vez em 1881, ele colecionou troféus por sete anos.</p>
+						<p>O tênis estreou logo na primeira edição dos Jogos Olímpicos, em 1896, em Atenas. Até 1924, os títulos olímpicos foram basicamente dominados por britânicos, franceses e norte-americanos. Em Amsterdã-1928, a modalidade não fez parte do programa olímpico e só retornou em Seul-1988</p>
+						<p>A partir dos Jogos de Sydney-2000, o tênis olímpico passou por uma alteração fundamental. O torneio começou a contar pontos para o ranking da Associação de Tenistas Profissionais (ATP), atraindo os principais nomes do esporte, que antes desdenhavam as Olimpíadas para priorizar a preparação para outros torneios. Nas últimas duas edições, tenistas consagrados entre os melhores do mundo conquistaram o ouro olímpico: o espanhol Rafael Nadal, em Pequim-2008, e o britânico Andy Murray, em Londres-2012.</p>
+					</div>
+					<div class="img-esportes col-sm-12">
+						<div class="headline"><h2>O jogo</h2></div>
+						<img src="lib/img/tenis/ojogo1.png"> <br>
+						<p>A definição de quem irá sacar primeiro deve ser feita por qualquer forma de sorteio. O vencedor do sorteio pode optar por sacar primeiro ou escolher qual o lado da quadra quer jogar o primeiro game, obrigando assim o adversário a executar o primeiro saque do jogo.</p>
+						<div class="headline"><h4>Saque</h3></div>
+						<p>Um saque inicia todo ponto de um jogo de tênis. O tenista que iniciar o ponto é chamado de sacador, e o que recebe a bola é chamado de recebedor. Para sacar, um tenista lança a bola para o ar e bate nela antes dela tocar o chão, atingindo a área de serviço do oponente. Em cada game os dois tenistas trocarão as funções. O sacador deve iniciar qualquer game obrigatoriamente do lado direito da quadra, entre a marca que divide a linha de fundo e a linha que delimita o jogo de duplas. O recebedor também se posicionará no lado direito da quadra, não tendo local obrigatório para ficar. O sacador só pode tirar os pés do chão e avançar sobre a quadra (sem tocar a linha de base) no instante de contato entre a raquete e a bola. Caso contrário, estará cometendo “foot-fault”, ou falta de pé, e seu saque será considerado falho. O mesmo se aplica se o sacador andar ou correr atrás da bola após seu lançamento. O saque é considerado executado no instante em que o sacador iniciar o movimento da raquete em direção à bola, podendo o sacador desistir do golpe após o lançamento da bola desde que não mova sua raquete para frente. O sacador deve golpear a bola antes que ela toque o solo. O tenista não pode lançar mais do que uma bola para executar o saque com a intenção de confundir o adversário. Após executar o primeiro saque do lado direito de sua quadra, o próximo ponto será iniciado pelo lado esquerdo e assim alternadamente até que se complete o game. Se houver engano nessa ordem, o ponto terá validade, mas o posicionamento correto deve ser assumido assim que se constatar o erro. A bola que foi sacada deve passar sobre a rede, sem tocá-la, e atingir o lado contrário dentro da área diametralmente oposta e delimitada como “área de saque”. O recebedor não pode responder o saque antes que a bola quique no quadrado de saque. O saque também será considerado faltoso se a bola atingir qualquer instalação permanente (que não seja a rede, cinta ou fita) antes de atingir o solo. Isso vale para os paus de simples, o poste que segura a rede ou o trecho de fita e rede que fica entre o pau de simples e o poste de rede num jogo de simples. Se errar a primeira tentativa de saque por qualquer um dos motivos descritos acima, o sacador terá direito a uma segunda tentativa, valendo para este novo saque todas as regras já citadas. Se errar também este segundo saque, o sacador perde o ponto. O sacador não deve sacar até que o recebedor esteja pronto. Se o recebedor tentar devolver o saque, ele será considerado como se estivesse pronto.</p>
+						<div class="headline"><h3>Let</h3></div>
+						<p>Acontece um “let” quando houver qualquer tipo de interferência não prevista na disputa de um ponto ou na execução de um jogada, como o saque. Exemplo: uma bola de outra quadra invade a quadra, a bola do sacador ou do recebedor de bola cai involuntariamente no chão, um papel voa sobre a quadra etc. O “let” força a repetição do saque ou da jogada inteira. O “let” pode ser pedido tanto pelo juiz como por qualquer um dos jogadores. Se o “let” é solicitado durante a execução de um saque, somente o saque deve ser repetido (assim, se o “let” ocorrer no segundo saque, o sacador deve repetir apenas o segundo saque). Se o “let” é chamado durante a disputa de um ponto, deve-se começar do zero, ou seja, a partir do primeiro saque. Se uma bola em jogo tornar-se irregular, com perda de pressão, por exemplo, deverá ser chamado um “let”. Durante a execução de um saque, há “let” quando a bola sacada resvala a rede, cinta ou fita e cai na área correta ou toca o recebedor ou sua raquete antes de tocar o solo (essa queimada também é chamada de “net”). Também se chama um “let” quando o recebedor não está pronto para receber o saque e o sacador inicia seu movimento.</p>
+						<div class="headline"><h3>Pontuação</h3></div>
+						<p>A pontuação é idêntica em jogos de simples e duplas. Um jogo de tênis é designado por termos como 15, 30, 40, e game, com zero pontos sendo referido pelo termo “love” (possivelmente derivado da uma palavra francesa “l’oeuf”, ovo, referenciado a aparência física do número zero). Um empate em 40 é chamado de “deuce”. Porque um jogo deve ser vencido por dois pontos, o jogo continua em iguais até um jogador fazer uma diferença de dois pontos. Depois de empatar, o jogador que vencer o próximo ponto é dito que tem a vantagem. Em uma competição de tênis, a pontuação do sacador é sempre dada primeiro. Os jogadores ou equipes mudam os lados quando a soma dos games jogados for ímpar.
+						Jogadores devem vencer seis games para vencer o set, mas eles devem vencer ao menos por uma diferença de dois games. Se um set ficar iguais em 5-5, ao menos 7 games vitoriosos são necessários para vencer o set. Um tie-break é usado se um set ficar empatado em 6-6. Um tiebreak é normalmente jogado por 7 pontos, mas vence quem fizer uma diferença de ao menos 2 pontos. O vencedor de um tiebreak vence o set por 7-6, mais o total de pontos feitos no tiebreak. O jogo de tênis é normalmente melhor de três ou cinco sets.</p>
+						<div class="headline"><h3>Perda de ponto</h3></div>
+						<p>O jogador perderá ponto se: Como recebedor, a bola sacada toque qualquer coisa que vista ou carregue, antes de tocar o solo. Enquanto sacador, cometa erro nas duas tentativas de saque. Não consegue rebater a bola acima da rede. Rebate a bola contra seu próprio lado da quadra, ou faz com que ela atinja uma instalação permanente ou acerte qualquer objeto fora das linhas que delimitam a quadra do seu oponente. Ao golpear a bola, deliberadamente a carrega ou a conduz em sua raquete ou deliberadamente a toca com sua raquete mais do que uma vez. O jogador ou sua raquete (na sua mão ou não) ou qualquer coisa que ele vista ou carregue toque a rede, poste, paus de simples, cabo, fita ou faixa ou o solo dentro da quadra do seu oponente, enquanto a bola estiver em jogo. Golpeia a bola antes que ela tenha passado a rede. A bola em jogo toque no jogador ou em qualquer coisa que ele vista ou carregue, exceto sua raquete na sua mão ou mãos. Atira sua raquete e atinge a bola. Deliberadamente e materialmente mude o formato de sua raquete durante o ponto.</p>
+						<div class="headline"><h3>Equipamentos</h3></div>
+						<div class="headline"><h4>Quadra</h4></div>
+						<p>O tênis é jogado em uma superfície plana retangular, geralmente em grama, saibro, ou em piso duro. O espaço adicional em torno da quadra é requerido para que jogadores possam alcançar a bola quando esta despassa os limites da quadra.</p>
+						<p>Uma rede é esticada a meio da quadra em toda a sua largurada, paralela com as linhas de base, dividindo-a em duas partes iguais.</p>
+						<img src="lib/img/tenis/quadra.jpg"/> <br>
+						<div class="headline"><h4>Bola</h4></div>
+						<p>É oca e composta de borracha inflada coberta com um tecido feito de lã e fibras artificiais. Bolas amarelas e brancas são usadas em torneios competitivos e são as cores mais comuns.</p>
+						<img src="lib/img/tenis/bola.png"/> <br>
+						<div class="headline"><h4>Raquete</h4></div>
+						<p>Não há um modele especifico, seu tamanho e forma variam. A classificação geral, é determinada pelo tamanho da cabeça da raquete, tamanho padrão, médio, grande e super grande. Em jogos de torneios, o comprimento máximo de uma raquete é de 81,3 cm, a largura máxima é de 31,8 cm, a cabeça da raquete não deve exceder a 39,4 cm de comprimento e de 29,2 cm de largura, e é frequentemente encordoado com nylon ou outro material sintético. Não tem restrição de peso. A empunhadura da raquete é normalmente coberta por uma fita de couro ou borracha.</p>
+						<img src="lib/img/tenis/raquete.jpg"/> <br>
+						<div class="headline"><h4>Vestimenta</h4></div>
+						<p>Os tenistas normalmente usam roupas leves, em sua maioria brancas, e tênis com  solado de borracha.</p>
+						<div class="headline"><h3>Empunhaduras</h3></div>
+						<img src="lib/img/tenis/empunhadura.jpg"/> <br>
+						<div class="headline"><h4>Continental</h4></div>
+						<p>Foi a primeira empunhadura do Tênis, da época das raquetes de madeira. Era utilizada para todos os golpes e não se utilizava Top Spin ainda, para essa finalidade não é indicado usar este tipo de empunhadura, pois pode causar lesões ao tenista. Hoje é indicada apenas para Saque, Voleio, Smash e Golpes com efeito de Slice</p>
+						<div class="headline"><h4>Eastern de Direita (Forehand)</h4></div>
+						<p>Muito utilizada pelos iniciantes e principalmente pelos jogadores que utilizavam a Continental e hoje preferem bater com Top Spin.</p>
+						<div class="headline"><h4>Eastern de Esquerda (Backhand)</h4></div>
+						<p>Muito utilizada porque dá a sensação de mais contato com a bola e não sobrecarrega o polegar. Gera pouco Top Spin.</p>
+						<div class="headline"><h4>Semi Western de Direita (Forehand)</h4></div>
+						<p>Muito utilizada por jogadores avançados e alguns profissionais, tem um ótimo Top Spin.</p>
+						<div class="headline"><h4>Semi Western de Esquerda (Backhand)</h4></div>
+						<p>Principal empunhadura utilizada pelos profissionais é necessário que se tenha muita força e coordenação para que se utilizá-la.</p>
+						<div class="headline"><h4>Western de Direita</h4></div>
+						<p>A maioria dos profissionais utiliza essa empunhadura, pois geram um Top Spin excelente, já que eles utilizam bastante força nos golpes.</p>
+						<div class="headline"><h4>Western de Esquerda</h4></div>
+						<p>Não é muito utilizada, está entre a Semi Western e a Western.</p>
+					</div>
+				</div>
+
+				<div class="headline"><h2>Modalidades de Tênis</h2></div>
+
+				<div class="cube-portfolio">
+					<div id="grid-container" class="cbp-l-grid-agency">
+						<div class="cbp-item">
+							<div class="cbp-caption margin-bottom-20">
+								<div class="cbp-caption-defaultWrap">
+									<img src="assets/img/portfolio/categoria/tenis/tenis-mesa.jpg" alt="">
+								</div>
+								<div class="cbp-caption-activeWrap">
+									<div class="cbp-l-caption-alignCenter">
+										<div class="cbp-l-caption-body">
+											<ul class="link-captions no-bottom-space">
+												<li><a href="#"><i class="rounded-x fa fa-link"></i></a></li>
+											</ul>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="item">
-								<img src="assets/img/contrate-player.jpg" alt="">
-								<div class="carousel-caption">
-									<p>Lançado o serviço contrate um jogador para a modalidade futebol.</p>
+							<div class="cbp-title-dark">
+								<div class="cbp-l-grid-agency-title">Tênis de mesa</div>
+							</div>
+						</div>
+						
+						<div class="cbp-item">
+							<div class="cbp-caption margin-bottom-20">
+								<div class="cbp-caption-defaultWrap">
+									<img src="assets/img/portfolio/categoria/tenis/tenis-praia.jpg" alt="">
+								</div>
+								<div class="cbp-caption-activeWrap">
+									<div class="cbp-l-caption-alignCenter">
+										<div class="cbp-l-caption-body">
+											<ul class="link-captions no-bottom-space">
+												<li><a href="#"><i class="rounded-x fa fa-link"></i></a></li>
+											</ul>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="item">
-								<img src="assets/img/quadra-Reserve.jpg" alt="">
-								<div class="carousel-caption">
-									<p>Lançado o serviço reserve um espaço.</p>
-								</div>
+							<div class="cbp-title-dark">
+								<div class="cbp-l-grid-agency-title">Tênis de Praia</div>
 							</div>
 						</div>
-
-						<div class="carousel-arrow">
-							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
-							</a>
-							<a class="right carousel-control" href="#myCarousel" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div><!--/col-md-4-->
-			</div>
-			<!-- End Info Blokcs -->
-
-			
-			
-			<div class="headline"><h2>Eventos recentes</h2></div>
-			<div class="row margin-bottom-20">
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnails thumbnail-style thumbnail-kenburn">
-						<div class="thumbnail-img">
-							<div class="overflow-hidden">
-								<img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
-							</div>
-							<a class="btn-more hover-effect" href="#">read more +</a>
-						</div>
-						<div class="caption">
-							<h3><a class="hover-effect" href="#">Project One</a></h3>
-							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnails thumbnail-style thumbnail-kenburn">
-						<div class="thumbnail-img">
-							<div class="overflow-hidden">
-								<img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
-							</div>
-							<a class="btn-more hover-effect" href="#">read more +</a>
-						</div>
-						<div class="caption">
-							<h3><a class="hover-effect" href="#">Project Two</a></h3>
-							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnails thumbnail-style thumbnail-kenburn">
-						<div class="thumbnail-img">
-							<div class="overflow-hidden">
-								<img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
-							</div>
-							<a class="btn-more hover-effect" href="#">read more +</a>
-						</div>
-						<div class="caption">
-							<h3><a class="hover-effect" href="#">Project Three</a></h3>
-							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnails thumbnail-style thumbnail-kenburn">
-						<div class="thumbnail-img">
-							<div class="overflow-hidden">
-								<img class="img-responsive" src="assets/img/main/img17.jpg" alt="">
-							</div>
-							<a class="btn-more hover-effect" href="#">read more +</a>
-						</div>
-						<div class="caption">
-							<h3><a class="hover-effect" href="#">Project Four</a></h3>
-							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-						</div>
+						
 					</div>
 				</div>
 			</div>
-			<!-- End Recent Works -->
-			
-				<div class="row col-md-12 headline">
-					<h2>Modalidades Esportivas</h2>
-				</div>
+		</div>
 
-			<!-- Início Categorias esportivas -->
-			<div class="categoria-background row col-md-12">
-				<div class="col-md-3">
-					<div class="service">	
-						<a href="futebol.html">
-							<div class="desc">
-								<h5>Futebol</h5>
-								<img class="img-categoria" src="lib/img/bola.png"/>
-							</div>
-						</a>	
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<h5>Vôlei</h5>
-							<img class="img-categoria" src="lib/img/volei.png"/>
-						</div>
-					</div>
-				</div>
-					<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<h5>Basquetebol</h5>
-							<img class="img-categoria" src="lib/img/basquete.png"/>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<h5>Natação</h5>
-							<img class="img-categoria" src="lib/img/natacao.png"/>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="categoria-background row margin-bottom-30 col-md-12">
-				<div class="col-md-3">
-					<div class="service">	
-						<a href="tenis.html">
-							<div class="desc">
-								<h5>Tênis</h5>
-								<img class="img-categoria" src="lib/img/tenis.png"/>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<h5>Corrida</h5>
-							<img class="img-categoria" src="lib/img/corrida.png"/>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<h5>Skate</h5>
-							<img class="img-categoria" src="lib/img/skate.png"/>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<h5>Airsoft</h5>
-							<img class="img-categoria" src="lib/img/airsoft.png"/>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Service Blokcs -->
-
-			
-
-			
-			<!-- Owl Clients v1 -->
-			<div class="headline"><h2>Nossos parceiros</h2></div>
-			<div class="owl-clients-v1">
-				<div class="item">
-					<img src="assets/img/clients4/1.png" alt="">
-				</div>
-				<div class="item">
-					<img src="assets/img/clients4/2.png" alt="">
-				</div>
-				<div class="item">
-					<img src="assets/img/clients4/3.png" alt="">
-				</div>
-				<div class="item">
-					<img src="assets/img/clients4/4.png" alt="">
-				</div>
-				<div class="item">
-					<img src="assets/img/clients4/5.png" alt="">
-				</div>
-				<div class="item">
-					<img src="assets/img/clients4/6.png" alt="">
-				</div>
-				<div class="item">
-					<img src="assets/img/clients4/7.png" alt="">
-				</div>
-				<div class="item">
-					<img src="assets/img/clients4/8.png" alt="">
-				</div>
-				<div class="item">
-					<img src="assets/img/clients4/9.png" alt="">
-				</div>
-			</div>
-			<!-- End Owl Clients v1 -->
-		</div><!--/container-->
-		<!-- End Content Part -->
+		<br><br>
 
 		<div class="footer-v1">
 			<div class="footer">
@@ -1189,6 +835,7 @@
 								<li><a href="#">Trabalhe conosco</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="#">Comunidade</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="#">Contato</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Parceiros</a><i class="fa fa-angle-right"></i></li>
 							</ul>
 						</div><!--/col-md-3-->
 						<!-- Fim Links Úteis -->
@@ -1212,13 +859,14 @@
 				</div>
 			</div>
 
+
 			<div class="copyright">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
 							<p>
-								2016 &copy; Todos os direitos Reservados.
-								<a href="#">Politica de Privacidade</a> | <a href="#">Termos de Serviço</a>
+								2015 &copy; Todos os direitos reservados.
+								<a href="#">Política de privacidade</a> | <a href="#">Termos de uso</a>
 							</p>
 						</div>
 
@@ -1270,8 +918,6 @@
 		<!--=== End Footer Version 1 ===-->
 	</div><!--/wrapper-->
 
-	
-
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
@@ -1279,29 +925,19 @@
 	<!-- JS Implementing Plugins -->
 	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
 	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-	<script type="text/javascript" src="assets/plugins/parallax-slider/js/modernizr.js"></script>
-	<script type="text/javascript" src="assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
-	<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+	<script type="text/javascript" src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
 	<!-- JS Customization -->
 	<script type="text/javascript" src="assets/js/custom.js"></script>
 	<!-- JS Page Level -->
 	<script type="text/javascript" src="assets/js/app.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-4.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/parallax-slider.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
-			OwlCarousel.initOwlCarousel();
 			StyleSwitcher.initStyleSwitcher();
-			ParallaxSlider.initParallaxSlider();
 		});
 	</script>
-		<!--[if lt IE 9]>
-			<script src="assets/plugins/respond.js"></script>
-			<script src="assets/plugins/html5shiv.js"></script>
-			<script src="assets/plugins/placeholder-IE-fixes.js"></script>
-		<![endif]-->
 
-	</body>
-	</html>
+</body>
+</html>
