@@ -1,10 +1,6 @@
 var $j = jQuery.noConflict();
 
-var user = {
-	username:'',
-	password:'',
-	email:''
-};
+
 
 var novoLogin = angular.module("novoLogin",[]);
 
