@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
- <html lang="en">
+ <html lang="en" ng-app="novoLogin">
 <head>
 	<title>Login</title>
 
@@ -40,8 +40,8 @@
 	<link rel="stylesheet" href="assets/css/custom.css">
 	
 	<link rel="stylesheet" href="lib/css/estilo.css">
-	<script src="lib/js/jquery/jquery.js"></script>
-	<script src="lib/js/script/script.js"></script>
+	<script src="lib/Javascript/Jquery/jquery.js"></script>
+	<script src="lib/Javascript/Script/script.js"></script>
 </head>
 
 <body>
@@ -653,11 +653,11 @@
 
 						<div class="input-group margin-bottom-20">
 							<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							<input type="text" placeholder="Usuário" class="form-control">
+							<input type="text" placeholder="Usuário" name="usuario" class="form-control">
 						</div>
 						<div class="input-group margin-bottom-20">
 							<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-							<input type="password" placeholder="Senha" class="form-control">
+							<input type="password" placeholder="Senha" name="senha" class="form-control">
 						</div>
 
 						<div class="row">
@@ -666,11 +666,11 @@
 							</div>
 							<div class="col-md-6">
 								<a id="logando" href="#">
-									<input type="button" class="btn-primary btn btn-block pull-right" type="submit" value="Logar" id="logar">
+									<input ng-click="logar()" type="button" class="btn-primary btn btn-block pull-right" type="submit" value="Logar" id="logar">
 								</a>
 							</div>
 						</div>
-
+						<div ng-view></div>
 						<hr>
 
 						<h4>Esqueceu sua senha ?</h4>

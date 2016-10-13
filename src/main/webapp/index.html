@@ -41,6 +41,7 @@
 
 	<!-- CSS Estilo -->
 	<link rel="stylesheet" href="lib/css/estilo.css">
+	
 
 </head>
 
@@ -240,6 +241,9 @@
                                 Eventos
                             </a>
                             <ul class="dropdown-menu">
+                                    <!-- All -->
+                                <li><a href="page_terms.html">Todos</a></li>
+                                <!-- End All -->
 
                                 <!-- Por esporte -->
                                 <li class="dropdown-submenu">
@@ -248,7 +252,7 @@
                             
                                 <!-- FutebolNews -->
                                 <li>
-                                    <a href="events_Futebol.html">
+                                    <a href="portfolio_single_item.html">
                                         <img class="menu-categoria" src="lib/img/bola.png"/>
                                         Futebol
                                     </a>
@@ -323,7 +327,7 @@
                                             <a href="javascript:void(0);">2016</a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="index.hmtl">1 Semestre</a></li>
-                                                <li><a href="eventsSecondSemester2016.html">2 Semestre</a></li>
+                                                <li><a href="index.hmtl">2 Semestre</a></li>
                                             </ul>
                                         </li>
 
@@ -744,19 +748,19 @@
 					<div id="myCarousel" class="carousel slide carousel-v1">
 						<div class="carousel-inner">
 							<div class="item active">
-								<img src="assets/img/Tenis-torneio.jpg" alt="">
+								<img src="lib/img/noticias/Tenis-torneio.jpg" alt="">
 								<div class="carousel-caption">
 									<p>Realizado primeiro torneio de Tenis organizado pelo Sports GO </p>
 								</div>
 							</div>
 							<div class="item">
-								<img src="assets/img/contrate-player.jpg" alt="">
+								<img src="lib/img/noticias/contrate-player.jpg" alt="">
 								<div class="carousel-caption">
 									<p>Lançado o serviço contrate um jogador para a modalidade futebol.</p>
 								</div>
 							</div>
 							<div class="item">
-								<img src="assets/img/quadra-Reserve.jpg" alt="">
+								<img src="lib/img/noticias/quadra-Reserve.jpg" alt="">
 								<div class="carousel-caption">
 									<p>Lançado o serviço reserve um espaço.</p>
 								</div>
@@ -985,6 +989,8 @@
 		</div><!--/container-->
 		<!-- End Content Part -->
 
+
+
 		<div class="footer-v1">
 			<div class="footer">
 				<div class="container">
@@ -1146,8 +1152,17 @@
 	<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/parallax-slider.js"></script>
-	<script type="text/javascript" src="lib/Javascript/Script/script.js"></script>
-		
+	
+	
+	<script>
+		jQuery(document).ready(function() {
+			App.init();
+			OwlCarousel.initOwlCarousel();
+			StyleSwitcher.initStyleSwitcher();
+			ParallaxSlider.initParallaxSlider();
+		});
+	</script>
+	
 
 	</body>
 	</html>
