@@ -2,7 +2,7 @@
 
 <html lang="en"> 
 <head>
-	<title>Cadastro conta</title>
+	<title>Airsoft</title>
 
 	<!-- Meta -->
 	<meta charset="utf-8">
@@ -10,14 +10,17 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
+	<!-- CSS Estilo -->
+	<link rel="stylesheet" href="lib/css/estilo.css">
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
 	<!-- Favicon -->
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<!-- Web Fonts -->
-	<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
+	<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin">
 
 	<!-- CSS Global Compulsory -->
-	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="lib/css/bootstrap.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 
 	<!-- CSS Header and Footer -->
@@ -28,9 +31,8 @@
 	<link rel="stylesheet" href="assets/plugins/animate.css">
 	<link rel="stylesheet" href="assets/plugins/line-icons/line-icons.css">
 	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
-
-	<!-- CSS Page Style -->
-	<link rel="stylesheet" href="assets/css/pages/page_log_reg_v1.css">
+	<link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css">
+	<link rel="stylesheet" href="assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css">
 
 	<!-- CSS Theme -->
 	<link rel="stylesheet" href="assets/css/theme-colors/default.css" id="style_color">
@@ -39,25 +41,11 @@
 	<!-- CSS Customization -->
 	<link rel="stylesheet" href="assets/css/custom.css">
 	
-	<script src="lib/js/angular/angular.js"></script>
-	<script src="lib/js/jquery/jquery.js"></script>
-	<script src="lib/js/script/script.js"></script>
-	
-	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<!-- JS Implementing Plugins -->
-	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-	<!-- JS Customization -->
-	<script type="text/javascript" src="assets/js/custom.js"></script>
-	<!-- JS Page Level -->
-	<script type="text/javascript" src="assets/js/app.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+
 </head>
 
-<body ng-controller="logarCtrl">
-	<div class="wrapper">
+<body class="header-fixed">
+	<div>
 		<!--=== Header ===-->
 		<div class="header">
 			<div class="container">
@@ -100,10 +88,7 @@
 			<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
 				<div class="container">
 					<ul class="nav navbar-nav">
-						<!-- Esportes -->
-						<li class="active">
-							<a href="index.html">Home</a>
-						</li>
+						<!-- Home -->
 						<li class="dropdown">
 							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
 								Esportes
@@ -642,57 +627,172 @@
 		</div>
 		<!--=== End Header ===-->
 
-		<!--=== Breadcrumbs ===-->
-		<div class="breadcrumbs">
-			<div class="container">
-				<h1 class="pull-left">Login</h1>
-				<ul class="pull-right breadcrumb">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="">Pages</a></li>
-					<li class="active">Login</li>
-				</ul>
-			</div><!--/container-->
-		</div><!--/breadcrumbs-->
-		<!--=== End Breadcrumbs ===-->
 
-		<!--=== Content Part ===-->
-		<div class="container content">
-			<div class="row">
-				<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
-					<form class="reg-page">
-						<div class="reg-header">
-							<h2>Cadastra-se</h2>
-						</div>
+		<br><br>
+		<div class="container back jumbotron">
+			<h1 class="text-center">
+				Airsoft
+			</h1>
+		</div>
 
-						<div class="input-group margin-bottom-20">
-							<span class="input-group-addon"><i class="fa fa-user"></i></span>
-							<input ng-model="cadastro.usuario" type="text" placeholder="Usuário" class="form-control" name="usuario">
-						</div>
-						<div class="input-group margin-bottom-20">
-							<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-							<input ng-model="cadastro.senha" type="password" placeholder="Senha" class="form-control" name="senha">
-						</div>
 
-						<div class="row">
-							<div class="col-md-6 checkbox">
-								<label><input type="checkbox">Manter conectado</label>
+
+		<!--=== Container Part ===-->
+		<div class="container back jumbotron">	
+			<div class="content">
+				<!-- Magazine Slider -->
+				<div class="carousel slide carousel-v2 margin-bottom-40" id="portfolio-carousel">
+					<ol class="carousel-indicators">
+						<li class="active rounded-x" data-target="#portfolio-carousel" data-slide-to="0"></li>
+						<li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="1"></li>
+						<li class="rounded-x" data-target="#portfolio-carousel" data-slide-to="2"></li>
+					</ol>
+
+					<div class="carousel-inner">
+						<div class="item active">
+							<img class="full-width img-responsive" src="lib/img/airsoft/airsoft_slide1.jpg" alt="">
+						</div>
+						<div class="item">
+							<img class="full-width img-responsive" src="lib/img/airsoft/airsoft_slide2.jpg" alt="">
+						</div>
+						<div class="item">
+							<img class="full-width img-responsive" src="lib/img/airsoft/airsoft_slide3.jpg" alt="">
+						</div>
+					</div>
+
+					<a class="left carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="prev">
+						<i class="fa fa-angle-left arrow-prev"></i>
+					</a>
+					<a class="right carousel-control rounded-x" href="#portfolio-carousel" role="button" data-slide="next">
+						<i class="fa fa-angle-right arrow-next"></i>
+					</a>
+				</div>
+				<!-- End Magazine Slider -->
+
+				<div class="img-esportes row margin-bottom-60">
+					<div class="col-sm-12">
+						<div class="headline"><h2><strong>História</strong></h2></div>
+						<p>Airsoft é um jogo em que os jogadores participam em simulações de combate militares com réplicas fiéis de armas de fogo utilizadas pelos exércitos e forças policiais em todo o mundo. As réplicas são feitas na escala 1:1 e peso próximo do modelo original, que pode ser de metal ou plástico e disparar projéteis esféricos PVC 6 mm de diâmetro, pesando 0.12 para 0,40 gramas, conhecido como Airsoft BB.</p>
+						<p>A propulsão de armas pode ocorrer com molas (Springer), motores eléctricos (AEG e PEA) para o pistão de compressão de ar ou diretamente por gás comprimido (GBB). Para complementar o mecanismo de disparo distinto de armas de fogo, sua diferenciação imediata é através do uso de laranja ou vermelho na ponta do cano. Nenhuma arma de Airsoft pode ser adaptada para a ser usada como arma de fogo. Além de ter mecanismos completamente diferentes, até as Airsofts de metal se quebrariam.</p>
+						<p>Sendo um jogo de simulação militar, o Airsoft premia para o realismo, assim os competidores usam, além de armas, equipamento militar e vestuário, muitos deles feitos exclusivamente para o esporte por dezenas de empresas especializadas em todo o mundo. As táticas usadas são reais e cenários podem variar entre ambiente natural e urbano. Os competidores criam, organizam e promovem o crescimento das equipes com regras, insígnia e hierarquia próprias. As equipes duelam entre si, ou em conjunto contra as outras em jogos e eventos chamados “operações” que podem durar dias, com vários tipos de missões (escoltar, buscar, conquistar, retomar, resgatar, apreender e etc.).</p>
+						<p>Não há nenhuma comparação entre o Airsoft e Paintball, pois Paintball é o esporte de cunho recreativo, principalmente aplicado em áreas confinadas ou de pequena extensão (campos), enquanto o Airsoft procura empregar grandes áreas, incluindo a busca de orientação no campo, atravessar obstáculos naturais e a utilização de vantagem estratégica.</p>
+						<div class="headline"><h2><strong>Origem</strong></h2></div>
+						<p>O Airsoft foi criado no Japão entre 1970 e 1980, quando algumas empresas começaram a produzir imitações de armas disparando balas de plásticas para atender uma demanda por armas de fogo, que foram e ainda são proibidas no Japão. Estas simulações foram utilizadas por colecionadores e indústria cinematográfica, que ao longo do tempo perceberam que batalhas poderiam ser simuladas com esses equipamentos. Hoje, ele se tornou um esporte bastante amplo, constante crescimento e praticado em vários países, como Portugal, Estados Unidos, Canadá, França, Espanha, Itália, Japão, Inglaterra, Alemanha, Áustria, Finlândia, Filipinas, Suíça, Suécia, Tailândia, Noruega e muitos outros.</p>
+						<div class="headline"><h2><strong>Valores e praticantes de Airsoft</strong></h2></div>
+						<p>O Airsoft é um esporte aonde o principal valor é a honra. Pelos projéteis não terem nenhuma tinta ou qualquer outra forma de marcação, os indivíduos atingidos devem fazer isso por si só, assim, quando um jogador leva o tiro, levanta sua mão e gritos de “Morto!”. Jogadores que tentam furar essa regra, normalmente são punidos e até impedidos de participar de campeonatos e eventos.</p>
+						<p>Jogadores de Airsoft são pessoas comuns que abrigam uma profunda admiração pela a polícia e forças militares em todo o mundo. São patriotas com valores de respeito, honra, ética, liberdade e cuidados para outras pessoas e o ambiente. Eles são médicos, engenheiros, advogados, professores, soldados, estudantes, funcionários públicos, enfim, pessoas comuns que gostam de atividades projetadas para simular a ação destas forças sem os riscos do uso de armas de fogo</p>
+						<div class="headline"><h2><strong>Categorias de Airsoft</strong></h2></div>
+						<img src="lib/img/airsoft/categoria.jpg"/> <br><br>
+						<div class="headline"><h4><strong>Milsim</strong></h4></div>
+						<p>Um jogo tático que consiste em um passatempo inspirado por simulação militar tática, que une duas ou mais equipes com número indefinido de elementos no ambiente natural ou urbano, cujos jogadores são armados com Airsoft. Os objetivos do jogo são definidos no início da operação e podem consistir em eliminar a equipe adversária, capturar um objeto ou jogador, escolta, ataque/defesa de perímetro, entre outros.</p>
+						<div class="headline"><h4><strong>Tiro desportivo de Airsoft</strong></h4></div>
+						<p>Uma categoria de Airsoft, individual ou coletiva, que combina a o tiro com precisão em sua forma mais simples com a prática de atividades atléticas como jogging ou corrida em obstáculos. Essa categoria ainda está em desenvolvimento, mas já conta com um gênero de prova já concretizado: O de Biatlo de Airsoft.</p>
+						<div class="headline"><h4><strong>Biatlo de Airsoft</strong></h4></div>
+						<p>O Biatlo de Airsoft é uma versão adaptada do biatlo Olímpico (Olimpíadas de Verão) de um quadro para a realidade do airsoft. O percurso é composto por um circuito fechado com 1/2 km de distância que, dependendo do tipo de prova, cada atleta terá de passar por uma ou mais vezes. Ao longo do caminho o praticante vai encontrar muitos pontos feitos para tiro ao alvo.</p>
+						<div class="headline"><h4><strong>Tiro de precisao de Airsoft</strong></h4></div>
+						<p>Uma disciplina individual de Airsoft, que é a prática de alvo tiro com arma de Airsoft exigindo concentração e disciplina do praticante. Esta é a categoria mais comum e praticada, embora não a nível de competição.</p>
+						<div class="headline"><h4><strong>Diferenças entre Airsoft e Paintball</strong></h4></div>
+						<p>O Airsoft trabalha com uma simulação mais tática que o Paintball, e usa usa réplicas de armas de fogo ao invés de marcadores.</p>
+						<p>O Airsoft usa uma munição esférica de PVC, o que não mancha o competidor.</p>
+						<p>O impacto de um tiro de Airsoft não tem a mesma energia que um tiro de Paintball, que é mais doloroso.</p>
+						<p>Munição mais barata.</p>
+						<p>O ponto principal do Airsoft é cumprir objetivos, não apenas eliminar a equipe adversária.</p>
+						<p>Os vários modelos de armas de Airsoft podem ser usados em várias situações.</p>
+					</div>
+					
+				</div>
+			
+				<div class="headline"><h2>Modalidades de Airsoft</h2></div>
+
+				<div class="cube-portfolio">
+					<div id="grid-container" class="cbp-l-grid-agency">
+						<div class="cbp-item">
+							<div class="cbp-caption margin-bottom-20">
+								<div class="cbp-caption-defaultWrap">
+									<img src="lib/img/airsoft/biatlo.jpg" alt="">
+								</div>
+								<div class="cbp-caption-activeWrap">
+									<div class="cbp-l-caption-alignCenter">
+										<div class="cbp-l-caption-body">
+											<ul class="link-captions no-bottom-space">
+												<li><a href="#"><i class="rounded-x fa fa-link"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="col-md-6">
-								<a href="page_login.html">
-									<input type="button" ng-click="cadastrar()" class="btn btn-primary btn-block pull-right"  id="cadastrar_usuario" value="Cadastrar">
-								</a>
+							<div class="cbp-title-dark">
+								<div class="cbp-l-grid-agency-title">Biatlo</div>
+							</div>
+						</div>
+						<div class="cbp-item">
+							<div class="cbp-caption margin-bottom-20">
+								<div class="cbp-caption-defaultWrap">
+									<img src="lib/img/airsoft/tiro_desportivo.jpg" alt="">
+								</div>
+								<div class="cbp-caption-activeWrap">
+									<div class="cbp-l-caption-alignCenter">
+										<div class="cbp-l-caption-body">
+											<ul class="link-captions no-bottom-space">
+												<li><a href="#"><i class="rounded-x fa fa-link"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cbp-title-dark">
+								<div class="cbp-l-grid-agency-title">Tiro Desportivo</div>
 							</div>
 						</div>
 						
-						<hr>
-
-					</form>
+						<div class="cbp-item">
+							<div class="cbp-caption margin-bottom-20">
+								<div class="cbp-caption-defaultWrap">
+									<img src="lib/img/airsoft/tiro_precisao.jpg" alt="">
+								</div>
+								<div class="cbp-caption-activeWrap">
+									<div class="cbp-l-caption-alignCenter">
+										<div class="cbp-l-caption-body">
+											<ul class="link-captions no-bottom-space">
+												<li><a href="#"><i class="rounded-x fa fa-link"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cbp-title-dark">
+								<div class="cbp-l-grid-agency-title">Tiro de precisão</div>
+							</div>
+						</div>
+						
+						<div class="cbp-item">
+							<div class="cbp-caption margin-bottom-20">
+								<div class="cbp-caption-defaultWrap">
+									<img src="lib/img/airsoft/milsim.jpg" alt="">
+								</div>
+								<div class="cbp-caption-activeWrap">
+									<div class="cbp-l-caption-alignCenter">
+										<div class="cbp-l-caption-body">
+											<ul class="link-captions no-bottom-space">
+												<li><a href="#"><i class="rounded-x fa fa-link"></i></a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cbp-title-dark">
+								<div class="cbp-l-grid-agency-title">Milsim</div>
+							</div>
+						</div>
+						
+					</div>
 				</div>
-			</div><!--/row-->
-		</div><!--/container-->
-		<!--=== End Content Part ===-->
+			</div>
+		</div>
 
-			<div class="footer-v1">
+		<br><br>
+
+		<div class="footer-v1">
 			<div class="footer">
 				<div class="container">
 					<div class="row">
@@ -753,13 +853,16 @@
 								<li><a href="#">Trabalhe conosco</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="#">Comunidade</a><i class="fa fa-angle-right"></i></li>
 								<li><a href="#">Contato</a><i class="fa fa-angle-right"></i></li>
+								<li><a href="#">Parceiros</a><i class="fa fa-angle-right"></i></li>
 							</ul>
 						</div><!--/col-md-3-->
 						<!-- Fim Links Úteis -->
 
 						<!-- Início Fale Conosco -->
 						<div class="col-md-3 map-img md-margin-bottom-40">
-							<div><h2><strong>FALE CONOSCO</strong></h2></div>
+							<div>
+								<h2><strong>FALE CONOSCO</strong></h2>
+							</div>
 							<address class="md-margin-bottom-40">
 								Alameda Palmeiras, s/n <br/>
 								Câmpus Samambaia, Goiânia - GO <br/>
@@ -776,13 +879,14 @@
 				</div>
 			</div>
 
+
 			<div class="copyright">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
 							<p>
-								2016 &copy; Todos os direitos Reservados.
-								<a href="#">Politica de Privacidade</a> | <a href="#">Termos de Serviço</a>
+								2015 &copy; Todos os direitos reservados.
+								<a href="#">Política de privacidade</a> | <a href="#">Termos de uso</a>
 							</p>
 						</div>
 
@@ -835,7 +939,19 @@
 	</div><!--/wrapper-->
 
 	<!-- JS Global Compulsory -->
-
+	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- JS Implementing Plugins -->
+	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+	<script type="text/javascript" src="assets/plugins/cube-portfolio/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+	<!-- JS Customization -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<!-- JS Page Level -->
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/cube-portfolio/cube-portfolio-4.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
 			App.init();
