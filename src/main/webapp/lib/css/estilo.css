@@ -24,7 +24,6 @@
 }
 .back{
 	background : white;
-	color : ;
 }
 .font{
 	font-size : 20px;
@@ -53,4 +52,8 @@
 }
 .balao-news{
 	width : 50%;
+}
+.expandir{
+	margin-top : 5%;
+	margin-bottom : 10%;
 }

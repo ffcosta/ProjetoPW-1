@@ -1,0 +1,53 @@
+
+<!--=== Content Part ===-->
+<div class="container content expandir">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 well">
+			<form class="reg-page" name="loginForm" novalidate>
+				<div class="reg-header">
+					<h2 id="logincad" class="text-center">Cadastra-se</h2>
+				</div>
+
+				<div class="input-group margin-bottom-20">
+					<span class="input-group-addon"><i class="fa fa-user"></i></span>
+					<input type="text" placeholder="Usuário" class="form-control" name="usuario" ng-model="user.usuario" required>
+				</div>
+
+				<!--<div class="input-group margin-bottom-20">
+					<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+					<input class="form-control" type="email" name="email" placeholder="Email" ng-model="email" ng-required="true" ng-patter="/^\w{10}@\w{10}$/">
+				</div>-->
+				<div class="input-group margin-bottom-20">
+					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+					<input type="password" placeholder="Senha" class="form-control" name="senha" ng-model="user.senha" ng-required="true"
+						ng-pattern="/^\d{6,8}$/">
+				</div>
+				<div class="input-group margin-bottom-20">
+					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
+					<input type="password" placeholder="Confirmar Senha" class="form-control" name="senha_confirm" ng-model="senha_confirm" ng-required="true"
+						ng-pattern="/^\d{6,8}$/">
+				</div>
+				
+				<div class="row">
+					<div class="col-md-6 col-md-offset-3">
+						<a href="#/home/login"> <input ng-click="cadastrar()" ng-disabled="loginForm.$invalid" type="button" class="btn btn-primary btn-block pull-right"
+								value="Cadastrar"></a>
+					</div>
+				</div>
+				<br>
+				<div class="erro-senha alert alert-danger" ng-model="erro">{{erro}}</div>
+				<div class="submit-sucess alert alert-info" ng-model="sucess">{{sucess}}</div>
+				<!--<div ng-show="loginForm.email.$invalid && loginForm.email.$dirty" class="alert alert-danger">Por favor preencha um email válido no formado ####@####</div>-->
+				<div ng-show="loginForm.senha.$invalid && loginForm.senha.$dirty" class="alert alert-danger">Senha deve ser numérica de 6~8 dígitos!!</div>
+				<div ng-show="loginForm.senha_confirm.$invalid && loginForm.senha_confirm.$dirty" class="alert alert-danger">Confirmação de senha deve numérica de 6~8 dígitos!!</div>
+				<div ng-show="loginForm.usuario.$invalid && loginForm.usuario.$dirty" class="alert alert-danger">Por favor preencha o campo usuário</div>
+				<hr>
+
+			</form>
+		</div>
+	</div>
+	<!--/row-->
+</div>
+<!--/container-->
+<!--=== End Content Part ===-->
+

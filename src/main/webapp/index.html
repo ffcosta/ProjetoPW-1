@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" ng-app="MyApp">
+<!--<![endif]-->
+
 <head>
 	<title>Sports GO</title>
 
@@ -41,7 +44,29 @@
 
 	<!-- CSS Estilo -->
 	<link rel="stylesheet" href="lib/css/estilo.css">
+
+	<!-- Angular -->
+	<script src="lib/js/angular/angular.js"></script>
+	<script src="lib/js/angular/angular-route.js"></script>
+	<script src="lib/js/MyApp.js"></script>
+	<script src="lib/js/controllers/MyAppCtrl.js"></script>
 	
+	<!-- JS Global Compulsory -->
+	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
+	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<!-- JS Implementing Plugins -->
+	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
+	<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+	<!-- JS Customization -->
+	<script type="text/javascript" src="assets/js/custom.js"></script>
+	<!-- JS Page Level -->
+	<script type="text/javascript" src="assets/js/app.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
+
+
 
 </head>
 
@@ -51,7 +76,7 @@
 		<div class="header">
 			<div class="container">
 				<!-- Logo -->
-				<a class="logo" href="index.html">
+				<a class="logo" href="#home">
 					<img src="assets/img/logo1-default.png" alt="Logo">
 				</a>
 				<!-- End Logo -->
@@ -72,7 +97,7 @@
 						<li class="topbar-devider"></li>
 						<li><a href="page_faq.html">Ajuda</a></li>
 						<li class="topbar-devider"></li>
-						<li><a href="page_login.html">Logar</a></li>
+						<li><a href="#/home/login">Logar</a></li>
 					</ul>
 				</div>
 				<!-- End Topbar -->
@@ -83,30 +108,26 @@
 					<span class="fa fa-bars"></span>
 				</button>
 				<!-- End Toggle -->
-			</div><!--/end container-->
+			</div>
+			<!--/end container-->
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
 				<div class="container">
 					<ul class="nav navbar-nav">
-						
+
 						<!-- ESPORTES -->
-						
+
 						<li class="dropdown active">
-							
+
 							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Esportes</a>
-							
+
 							<ul class="dropdown-menu">
-							
-							    <!--Pagina inicial -->
-								<li class="active"><a href="index.html">Página Inicial</a></li>
-                                <!--Pagina inicial -->
-                                
+
 								<!-- FutebolPAG -->
 								<li class="dropdown-submenu">
 									<a href="portfolio_single_item.html">
-										<img class="menu-categoria" src="lib/img/bola.png"/>
-										Futebol
+										<img class="menu-categoria" src="lib/img/bola.png" /> Futebol
 									</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
@@ -117,12 +138,11 @@
 									</ul>
 								</li>
 								<!-- FutebolPAG -->
-								
+
 								<!-- BasquetebolPAG -->
 								<li class="dropdown-submenu">
 									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/basquete.png"/>
-										Basquetebol
+										<img class="menu-categoria" src="lib/img/basquete.png" /> Basquetebol
 									</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
@@ -137,8 +157,7 @@
 								<!-- VoleibolPAG -->
 								<li class="dropdown-submenu">
 									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/volei.png"/>
-										Voleibol
+										<img class="menu-categoria" src="lib/img/volei.png" /> Voleibol
 									</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
@@ -153,8 +172,7 @@
 								<!-- NataçãoPAG -->
 								<li class="dropdown-submenu">
 									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/natacao.png"/>
-										Natação
+										<img class="menu-categoria" src="lib/img/natacao.png" /> Natação
 									</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
@@ -165,12 +183,11 @@
 									</ul>
 								</li>
 								<!-- NataçãoPAG -->
-								
+
 								<!-- TenisPAG -->
 								<li class="dropdown-submenu">
 									<a href="tenis.html">
-										<img class="menu-categoria" src="lib/img/tenis.png"/>
-										Tênis
+										<img class="menu-categoria" src="lib/img/tenis.png" /> Tênis
 									</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
@@ -181,12 +198,11 @@
 									</ul>
 								</li>
 								<!-- TenisPAG -->
-								
+
 								<!-- AtletismoPAG -->
 								<li class="dropdown-submenu">
 									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/corrida.png"/>
-										Atletismo
+										<img class="menu-categoria" src="lib/img/corrida.png" /> Atletismo
 									</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
@@ -197,12 +213,11 @@
 									</ul>
 								</li>
 								<!-- AtletismoPPAG -->
-								
+
 								<!-- SkatePAG -->
 								<li class="dropdown-submenu">
 									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/skate.png"/>
-										Skate
+										<img class="menu-categoria" src="lib/img/skate.png" /> Skate
 									</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
@@ -213,12 +228,11 @@
 									</ul>
 								</li>
 								<!-- SkatePAG -->
-								
+
 								<!-- AirSoftPAG -->
 								<li class="dropdown-submenu">
 									<a href="index.html">
-										<img class="menu-categoria" src="lib/img/airsoft.png"/>
-										Air Soft
+										<img class="menu-categoria" src="lib/img/airsoft.png" /> Air Soft
 									</a>
 									<ul class="dropdown-menu">
 										<li><a target="_blank" href="One-Pages/Classic/index.html">- One Page Template</a></li>
@@ -230,605 +244,269 @@
 								</li>
 								<!-- AirSoftPAG -->
 
-								
+
 							</ul>
 						</li>
 						<!-- End Home -->
 
-						                        <!-- Events -->
-                        <li class="dropdown">
-                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
+						<!-- Events -->
+						<li class="dropdown">
+							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                                 Eventos
                             </a>
-                            <ul class="dropdown-menu">
-                                    <!-- All -->
-                               <!-- <li><a href="">Inserir Evento</a></li> -->
-                                <!-- End All -->
+							<ul class="dropdown-menu">
+								<!-- All -->
+								<!-- <li><a href="">Inserir Evento</a></li> -->
+								<!-- End All -->
 
-                                <!-- Por esporte -->
-                                <li class="dropdown-submenu">
-                                    <a href="javascript:void(0);">Por Esporte</a>
-                            <ul class="dropdown-menu">
-                            
-                                <!-- FutebolNews -->
-                                <li>
-                                    <a href="portfolio_single_item.html">
-                                        <img class="menu-categoria" src="lib/img/bola.png"/>
-                                        Futebol
-                                    </a>
-                                 </li>
-                                <!-- End FutebolNews -->
-                                
-                                <!-- BasquetebolNews -->
-                                <li> <a href="index.html">
-                                        <img class="menu-categoria" src="lib/img/basquete.png"/>
-                                        Basquetebol
-                                    </a>
-                                </li>
-                                <!--End BasquetebolNews -->
+								<!-- Por esporte -->
+								<li class="dropdown-submenu">
+									<a href="javascript:void(0);">Por Esporte</a>
+									<ul class="dropdown-menu">
 
-                                <!--VoleibolNews -->
-                                <li>
-                                    <a href="index.html">
-                                        <img class="menu-categoria" src="lib/img/volei.png"/>
-                                        Voleibol
-                                    </a>
-                                </li>
-                                <!--End VoleibolNews -->
+										<!-- FutebolNews -->
+										<li>
+											<a href="portfolio_single_item.html">
+												<img class="menu-categoria" src="lib/img/bola.png" /> Futebol
+											</a>
+										</li>
+										<!-- End FutebolNews -->
 
-                                <!-- NataçãoNews-->
-                                <li> <a href="index.html">
-                                        <img class="menu-categoria" src="lib/img/natacao.png"/>
-                                        Natação
-                                    </a>
-                                </li>
-                                <!--end NataçãoNews-->
-                                
-                                <!-- TenisNews -->
-                                <li> <a href="index.html">
-                                        <img class="menu-categoria" src="lib/img/tenis.png"/>
-                                        Tênis
-                                    </a>
-                                </li>
-                                <!-- End NataçãoNews -->
-                                
-                                <!-- AtletismoNews -->
-                                <li> <a href="index.html">
-                                        <img class="menu-categoria" src="lib/img/corrida.png"/>
-                                        Atletismo
-                                        </a>
-                                </li>
-                                <!-- End AtletismoNews-->
-                                
-                                <!-- SkateSub -->
-                                <li> <a href="index.html">
-                                        <img class="menu-categoria" src="lib/img/skate.png"/>
-                                        Skate
-                                    </a>
-                                </li>
-                                <!-- End SkateNews -->
-                                
-                                <!-- AirSoftSub -->
-                                <li> <a href="index.html">
-                                        <img class="menu-categoria" src="lib/img/airsoft.png"/>
-                                        Air Soft
-                                    </a>
-                                <!--End AirSoftNews -->
-                                
-                            </ul>
-                                </li>
-                                <!-- End Por Esporte -->
+										<!-- BasquetebolNews -->
+										<li>
+											<a href="index.html">
+												<img class="menu-categoria" src="lib/img/basquete.png" /> Basquetebol
+											</a>
+										</li>
+										<!--End BasquetebolNews -->
 
-                                <!-- Todos Menu -->
-                                <li>                                 
-                                    <a href="eventsSecondSemester2016.html">Todos</a>
-                                </li>
-                                <!-- Fim todos -->
-                            </ul>
-                        </li>
-                        <!-- End  -->
+										<!--VoleibolNews -->
+										<li>
+											<a href="index.html">
+												<img class="menu-categoria" src="lib/img/volei.png" /> Voleibol
+											</a>
+										</li>
+										<!--End VoleibolNews -->
 
-						<!-- Search Block -->
-						<li>
-							<i class="search fa fa-search search-btn"></i>
-							<div class="search-open">
-								<div class="input-group animated fadeInDown">
-									<input type="text" class="form-control" placeholder="Search">
-									<span class="input-group-btn">
+										<!-- NataçãoNews-->
+										<li>
+											<a href="index.html">
+												<img class="menu-categoria" src="lib/img/natacao.png" /> Natação
+											</a>
+										</li>
+										<!--end NataçãoNews-->
+
+										<!-- TenisNews -->
+										<li>
+											<a href="index.html">
+												<img class="menu-categoria" src="lib/img/tenis.png" /> Tênis
+											</a>
+										</li>
+										<!-- End NataçãoNews -->
+
+										<!-- AtletismoNews -->
+										<li>
+											<a href="index.html">
+												<img class="menu-categoria" src="lib/img/corrida.png" /> Atletismo
+											</a>
+										</li>
+										<!-- End AtletismoNews-->
+
+										<!-- SkateSub -->
+										<li>
+											<a href="index.html">
+												<img class="menu-categoria" src="lib/img/skate.png" /> Skate
+											</a>
+										</li>
+										<!-- End SkateNews -->
+
+										<!-- AirSoftSub -->
+										<li>
+											<a href="index.html">
+												<img class="menu-categoria" src="lib/img/airsoft.png" /> Air Soft
+											</a>
+											<!--End AirSoftNews -->
+
+									</ul>
+									</li>
+									<!-- End Por Esporte -->
+
+									<!-- Todos Menu -->
+									<li>
+										<a href="eventsSecondSemester2016.html">Todos</a>
+									</li>
+									<!-- Fim todos -->
+							</ul>
+							</li>
+							<!-- End  -->
+							<!-- Search Block -->
+							<li>
+								<i class="search fa fa-search search-btn"></i>
+								<div class="search-open">
+									<div class="input-group animated fadeInDown">
+										<input type="text" class="form-control" placeholder="Search">
+										<span class="input-group-btn">
 										<button class="btn-u" type="button">Go</button>
 									</span>
+									</div>
 								</div>
-							</div>
-						</li>
-						<!-- End Search Block -->
+							</li>
+							<!-- End Search Block -->
 					</ul>
-				</div><!--/end container-->
-			</div><!--/navbar-collapse-->
+				</div>
+				<!--/end container-->
+			</div>
+			<!--/navbar-collapse-->
 		</div>
 		<!--=== End Header ===-->
 
-		<!--=== Slider ===-->
-		<div class="slider-inner">
-			<div id="da-slider" class="da-slider">
-				<div class="da-slide">
-					<h2><i>ENCONTRE SEU ESPORTE</i> <br /> <i>RÁPIDO E FÁCIL</i> <br /> <i>EXERCITE-SE HOJE</i></h2>
-					<p><i>Inúmeros anúncios</i> <br /> <i>De esportes</i> <br /> <i>Profissionais e amadores</i>
-					<br /> <i>Para praticar e compertir</i></p>
-					<div class="da-img"><img class="img-responsive" src="assets/plugins/parallax-slider/img/1.png" alt=""></div>
-				</div>
-				<div class="da-slide">
-					<h2><i>RESPONSIVE VIDEO</i> <br /> <i>SUPPORT AND</i> <br /> <i>MANY MORE</i></h2>
-					<p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i></p>
-					<div class="da-img">
-						<iframe src="https://player.vimeo.com/video/181212513" width="530" height="300" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-					</div>
-				</div>
-				<div class="da-slide">
-					<h2><i>USING BEST WEB</i> <br /> <i>SOLUTIONS WITH</i> <br /> <i>HTML5/CSS3</i></h2>
-					<p><i>Lorem ipsum dolor amet</i> <br /> <i>tempor incididunt ut</i> <br /> <i>veniam omnis </i></p>
-					<div class="da-img"><img src="assets/plugins/parallax-slider/img/html5andcss3.png" alt="image01" /></div>
-				</div>
-				<div class="da-arrows">
-					<span class="da-arrows-prev"></span>
-					<span class="da-arrows-next"></span>
-				</div>
-			</div>
-		</div><!--/slider-->
-		<!--=== End Slider ===-->
+		<!-- View das rotas -->
+
+		<ng-view>
 
 
+		</ng-view>
+
+	</div>
+
+<div class="footer-v1">
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 md-margin-bottom-40 newstler text-justify">
+                    <div class="text-center">
+                        <h2><strong>NEWSTLER</strong></h2>
+                    </div>
+                    <p>Prometemos não utilizar as suas informações para o envio de nenhum tipo de SPAM.</p>
+
+                    <form>
+                        <input class="form-control" type="text" name="nome" placeholder="NOME">
+                        <br>
+                        <input class="form-control" type="text" name="email" placeholder="EMAIL">
+                        <br>
+                        <input class="form-control" type="button" name="enviar" value="ENVIAR">
+                    </form>
+                </div>
+
+                <div class="col-md-3 md-margin-bottom-40">
+                    <div class="posts">
+                        <div>
+                            <h2><strong>ÚLTIMOS EVENTOS</strong></h2>
+                        </div>
+                        <ul class="list-unstyled latest-list">
+                            <li>
+                                <a href="#">Incredible content</a>
+                                <small>May 8, 2014</small>
+                            </li>
+                            <li>
+                                <a href="#">Best shoots</a>
+                                <small>June 23, 2014</small>
+                            </li>
+                            <li>
+                                <a href="#">New Terms and Conditions</a>
+                                <small>September 15, 2014</small>
+                            </li>
+                            <li>
+                                <a href="#">New Terms and Conditions</a>
+                                <small>September 15, 2014</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-3 md-margin-bottom-40">
+                    <div>
+                        <h2><strong>LINKS ÚTEIS</strong></h2>
+                    </div>
+                    <ul class="list-unstyled link-list">
+                        <li><a href="index.html">Home</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Quem somos</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Eventos anteriores</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Trabalhe conosco</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Comunidade</a><i class="fa fa-angle-right"></i></li>
+                        <li><a href="#">Contato</a><i class="fa fa-angle-right"></i></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 map-img md-margin-bottom-40">
+                    <div>
+                        <h2>FALE CONOSCO</h2>
+                    </div>
+                    <address class="md-margin-bottom-40">
+                        Alameda Palmeiras, s/n <br/> Câmpus Samambaia, Goiânia - GO <br/> CEP : 74690-900 <br/> Fone: (62)
+                        6666-6666
+                        <br/> Email: <a href="#" class="">sportsgo@inf.ufg.br</a>
+                    </address>
+                    <br><br><br><br>
+                </div>
 
 
-		<!--=== Content Part ===-->
-		<div class="container content-sm">
-			<!-- Recent Works -->
-			
-			<!-- Info Blokcs -->
-			<div class="row margin-bottom-30">
-				<!-- Welcome Block -->
-				<div class="col-md-8 md-margin-bottom-40">
-					<div class="headline"><h2>Bem vindo ao Sports GO</h2></div>
-					<div class="row">
-						<div class="col-sm-4">
-							<img class="img-responsive margin-bottom-20" src="assets/img/esportes-2.png" alt="">
-						</div>
-						<div class="col-sm-8">
-							<p>Sports GO foi pensado como uma ferramenta para inovar sua visão sobre esporte, oferecendo:</p>
-							<ul class="list-unstyled margin-bottom-20">
-								<li><i class="fa fa-check color-red"></i> Facilidade para praticar esportes</li>
-								<li><i class="fa fa-check color-red"></i> Novidades sobre seu esporte favorito</li>
-								<!-- <li><i class="fa fa-check color-red"></i> Responsive Bootstrap Template</li> -->
-							</ul>
-						</div>
-					</div>
+            </div>
 
-					<blockquote class="hero-unify">
-						<p>O Sports GO é uma idéia que surgiu da necessidade de oferecer novas ideias na forma como as pessoas podem localizar em suas cidades locais, times, notícias sobre seus esportes favoritas. Chegamos para oferecer algo novo e facilitar a vida das pessoas..</p>
-						<small>CEO, Jack Bour</small>
-					</blockquote>
-				</div><!--/col-md-8-->
+        </div>
+    </div>
 
-				<!-- Latest Shots -->
-				<div class="col-md-4">
-					<div class="headline"><h2>Últimas Notícias</h2></div>
-					<div id="myCarousel" class="carousel slide carousel-v1">
-						<div class="carousel-inner">
-							<div class="item active">
-								<img src="lib/img/noticias/Tenis-torneio.jpg" alt="">
-								<div class="carousel-caption">
-									<p>Realizado primeiro torneio de Tenis organizado pelo Sports GO </p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="lib/img/noticias/contrate-player.jpg" alt="">
-								<div class="carousel-caption">
-									<p>Lançado o serviço contrate um jogador para a modalidade futebol.</p>
-								</div>
-							</div>
-							<div class="item">
-								<img src="lib/img/noticias/quadra-Reserve.jpg" alt="">
-								<div class="carousel-caption">
-									<p>Lançado o serviço reserve um espaço.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="carousel-arrow">
-							<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-								<i class="fa fa-angle-left"></i>
-							</a>
-							<a class="right carousel-control" href="#myCarousel" data-slide="next">
-								<i class="fa fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div><!--/col-md-4-->
-			</div>
-			<!-- End Info Blokcs -->
-
-			
-			
-			<div class="headline"><h2>Eventos recentes</h2></div>
-			<div class="row margin-bottom-20">
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnails thumbnail-style thumbnail-kenburn">
-						<div class="thumbnail-img">
-							<div class="overflow-hidden">
-								<img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
-							</div>
-							<a class="btn-more hover-effect" href="#">read more +</a>
-						</div>
-						<div class="caption">
-							<h3><a class="hover-effect" href="#">Project One</a></h3>
-							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnails thumbnail-style thumbnail-kenburn">
-						<div class="thumbnail-img">
-							<div class="overflow-hidden">
-								<img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
-							</div>
-							<a class="btn-more hover-effect" href="#">read more +</a>
-						</div>
-						<div class="caption">
-							<h3><a class="hover-effect" href="#">Project Two</a></h3>
-							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnails thumbnail-style thumbnail-kenburn">
-						<div class="thumbnail-img">
-							<div class="overflow-hidden">
-								<img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
-							</div>
-							<a class="btn-more hover-effect" href="#">read more +</a>
-						</div>
-						<div class="caption">
-							<h3><a class="hover-effect" href="#">Project Three</a></h3>
-							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6">
-					<div class="thumbnails thumbnail-style thumbnail-kenburn">
-						<div class="thumbnail-img">
-							<div class="overflow-hidden">
-								<img class="img-responsive" src="assets/img/main/img17.jpg" alt="">
-							</div>
-							<a class="btn-more hover-effect" href="#">read more +</a>
-						</div>
-						<div class="caption">
-							<h3><a class="hover-effect" href="#">Project Four</a></h3>
-							<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Recent Works -->
-			
-				<div class="row col-md-12 headline">
-					<h2>Modalidades Esportivas</h2>
-				</div>
-
-			<!-- Início Categorias esportivas -->
-			<div class="categoria-background row col-md-12">
-				<div class="col-md-3">
-					<div class="service">	
-						<a href="futebol.html">
-							<div class="desc">
-								<h5>Futebol</h5>
-								<img class="img-categoria" src="lib/img/bola.png"/>
-							</div>
-						</a>	
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<a href="volei.html">
-								<h5>Vôlei</h5>
-								<img class="img-categoria" src="lib/img/volei.png"/>
-							</a>
-						</div>
-					</div>
-				</div>
-					<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<a href="basquete.html">
-								<h5>Basquetebol</h5>
-								<img class="img-categoria" src="lib/img/basquete.png"/>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<a href="natacao.html">
-								<h5>Natação</h5>
-								<img class="img-categoria" src="lib/img/natacao.png"/>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="categoria-background row margin-bottom-30 col-md-12">
-				<div class="col-md-3">
-					<div class="service">	
-						<a href="tenis.html">
-							<div class="desc">
-								<h5>Tênis</h5>
-								<img class="img-categoria" src="lib/img/tenis.png"/>
-							</div>
-						</a>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<a href="atletismo.html"/>	
-								<h5>Atletismo</h5>
-								<img class="img-categoria" src="lib/img/corrida.png"/>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<a href="skate.html">
-								<h5>Skate</h5>
-								<img class="img-categoria" src="lib/img/skate.png"/>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="service">	
-						<div class="desc">
-							<a href="airsoft.html">
-								<h5>Airsoft</h5>
-								<img class="img-categoria" src="lib/img/airsoft.png"/>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Service Blokcs -->
-
-			
-
-			
-			<!-- Owl Clients v1 -->
-			<div class="headline"><h2>Nossos parceiros</h2></div>
-			<div class="owl-clients-v1">
-				<div class="item">
-					<a href="http://adidas.com.br">
-						<img src="lib/img/parceiros/adidas.jpg" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="http://apple.com.br">
-						<img src="lib/img/parceiros/aplle.png" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="http://www.bcb.gov.br">
-						<img src="lib/img/parceiros/bacen.jpg" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="http://bradesco.com.br">
-						<img src="lib/img/parceiros/bradesco.png" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="http://globo.com">
-						<img src="lib/img/parceiros/globo.png" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="http://pcsist.com.br/">
-						<img src="lib/img/parceiros/pcsistema.jpg" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="https://www.ibm.com.br">
-						<img src="lib/img/parceiros/ibm.png" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="http://intel.com.br">
-						<img src="lib/img/parceiros/intel.png" alt="">
-					</a>
-				</div>
-				<div class="item">
-					<a href="http://nike.com.br"><img src="lib/img/parceiros/nike.png" alt=""></a>
-				</div>
-			</div>
-			<!-- End Owl Clients v1 -->
-		</div><!--/container-->
-		<!-- End Content Part -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        2016 &copy; Todos os direitos Reservados.
+                        <a href="#">Politica de Privacidade</a> | <a href="#">Termos de Serviço</a>
+                    </p>
+                </div>
 
 
-
-		<div class="footer-v1">
-			<div class="footer">
-				<div class="container">
-					<div class="row">
-						<!-- Início Newstler -->
-						<div class="col-md-3 md-margin-bottom-40 newstler text-justify">
-							<div class="text-center">
-								<h2><strong>NEWSTLER</strong></h2>
-							</div>
-							<p>Prometemos não utilizar as suas informações para o envio de nenhum tipo de SPAM.</p>
-							
-							<form>
-								<input class="form-control" type="text" name="nome" placeholder="NOME">
-								<br>
-								<input class="form-control" type="text" name="email" placeholder="EMAIL">
-								<br>
-								<input class="form-control" type="button" name="enviar" value="ENVIAR">
-							</form>
-						</div>
-						<!-- Fim Newstler -->
-
-						<!-- Início Últimos Eventos -->
-						<div class="col-md-3 md-margin-bottom-40">
-							<div class="posts">
-								<div>
-									<h2><strong>ÚLTIMOS EVENTOS</strong></h2>
-								</div>
-								<ul class="list-unstyled latest-list">
-									<li>
-										<a href="#">Incredible content</a>
-										<small>May 8, 2014</small>
-									</li>
-									<li>
-										<a href="#">Best shoots</a>
-										<small>June 23, 2014</small>
-									</li>
-									<li>
-										<a href="#">New Terms and Conditions</a>
-										<small>September 15, 2014</small>
-									</li>
-									<li>
-										<a href="#">New Terms and Conditions</a>
-										<small>September 15, 2014</small>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<!-- Fim Últimos eventos -->
-
-						<!-- Início Links Úteis -->
-						<div class="col-md-3 md-margin-bottom-40">
-							<div>
-								<h2><strong>LINKS ÚTEIS</strong></h2>
-							</div>
-							<ul class="list-unstyled link-list">
-								<li><a href="index.html">Home</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Quem somos</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Eventos anteriores</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Trabalhe conosco</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Comunidade</a><i class="fa fa-angle-right"></i></li>
-								<li><a href="#">Contato</a><i class="fa fa-angle-right"></i></li>
-							</ul>
-						</div><!--/col-md-3-->
-						<!-- Fim Links Úteis -->
-
-						<!-- Início Fale Conosco -->
-						<div class="col-md-3 map-img md-margin-bottom-40">
-							<div><h2>FALE CONOSCO</h2></div>
-							<address class="md-margin-bottom-40">
-								Alameda Palmeiras, s/n <br/>
-								Câmpus Samambaia, Goiânia - GO <br/>
-								CEP : 74690-900 <br/>
-								Fone: (62) 6666-6666 <br/>
-								Email: <a href="#" class="">sportsgo@inf.ufg.br</a>
-							</address>
-							<br><br><br><br>
-						</div>
-						<!-- Fim Fale Conosco -->
-
-					</div>
-
-				</div>
-			</div>
-
-			<div class="copyright">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<p>
-								2016 &copy; Todos os direitos Reservados.
-								<a href="#">Politica de Privacidade</a> | <a href="#">Termos de Serviço</a>
-							</p>
-						</div>
-
-						<!-- Social Links -->
-						<div class="col-md-6">
-							<ul class="footer-socials list-inline">
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
-										<i class="fa fa-facebook"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
-										<i class="fa fa-skype"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
-										<i class="fa fa-google-plus"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
-										<i class="fa fa-linkedin"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
-										<i class="fa fa-pinterest"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
-										<i class="fa fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
-										<i class="fa fa-dribbble"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<!-- End Social Links -->
-					</div>
-				</div>
-			</div><!--/copyright-->
-		</div>
-		<!--=== End Footer Version 1 ===-->
-	</div><!--/wrapper-->
+                <div class="col-md-6">
+                    <ul class="footer-socials list-inline">
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype">
+                                <i class="fa fa-skype"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Pinterest">
+                                <i class="fa fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="tooltips" data-toggle="tooltip" data-placement="top" title="" data-original-title="Dribbble">
+                                <i class="fa fa-dribbble"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 	
 
-	<!-- JS Global Compulsory -->
-	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/plugins/jquery/jquery-migrate.min.js"></script>
-	<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-	<!-- JS Implementing Plugins -->
-	<script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
-	<script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>
-	<script type="text/javascript" src="assets/plugins/parallax-slider/js/modernizr.js"></script>
-	<script type="text/javascript" src="assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
-	<script type="text/javascript" src="assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-	<!-- JS Customization -->
-	<script type="text/javascript" src="assets/js/custom.js"></script>
-	<!-- JS Page Level -->
-	<script type="text/javascript" src="assets/js/app.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/style-switcher.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/parallax-slider.js"></script>
-	
-	
-	<script>
-		jQuery(document).ready(function() {
-			App.init();
-			OwlCarousel.initOwlCarousel();
-			StyleSwitcher.initStyleSwitcher();
-			ParallaxSlider.initParallaxSlider();
-		});
-	</script>
-	
 
-	</body>
-	</html>
+
+
+
+</body>
+
+</html>
