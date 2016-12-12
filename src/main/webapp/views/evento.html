@@ -23,15 +23,17 @@
             <figcaption></figcaption>
         </figure>
         <p ng-bind="eventos.descricao"></p>
-        <div>
+        <div class="text-left">
             <p>Endereço: {{eventos.endereco}}</p>
             <p>Data: {{eventos.data}}</p>
+            <p>Categoria: {{eventos.categoria}}</p>
             <p>Responsável: {{eventos.responsavel}}</p>
             <p>Código: {{eventos.codigo}} </p>
+            <p>Descricao: {{eventos.descricao}}</p>
         </div>
         <div>
-            <a href="#/home/evento">
-                <i ng-click="removerEvento(evento)" class="col-md-3 col-md-offset-3 fa fa-times fa-3x" aria-hidden="true"></i>
+            <a href="#/home" ng-click="removerEvento(eventos)">
+                <i class="col-md-3 col-md-offset-3 fa fa-times fa-3x" aria-hidden="true"></i>
             </a>
 
 

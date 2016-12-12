@@ -24,7 +24,7 @@ function configurar($routeProvider) {
         })
         .when('/home/evento', {
             templateUrl: 'views/evento.html',
-            controller: 'MyAppCtrl'
+            controller: 'EventoController'
         })
         .when('/futebol', {
             templateUrl: 'views/esportes/futebol.html',

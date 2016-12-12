@@ -95,6 +95,33 @@ public class EventoModel {
 		conn.close();
 	}
 	
+	public static List<Evento> selecionarEventos(String categoria) throws SQLException {
+		Connection conn = obterConexao();
+
+		Statement stmt = conn.createStatement();
+		String sql = "select * from admin.evento where categoria = ?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, categoria);
+		ResultSet rs = stmt.executeQuery(sql);
+
+		List<Evento> listaDeEventos = new ArrayList<Evento>();
+		while (rs.next()) {
+			// Cria um usuário para o registro.
+			Evento evento = new Evento();
+			evento.setTitulo(rs.getString("titulo"));
+			evento.setResponsavel(rs.getString("responsavel"));
+			evento.setEndereco(rs.getString("endereco"));
+			evento.setData(rs.getString("data"));
+			evento.setCategoria(rs.getString("categoria"));
+			evento.setDescricao(rs.getString("descricao"));
+			evento.setFoto(rs.getString("foto"));
+			evento.setCodigo(rs.getString("codigo"));
+			// Adiciona o usuário na lista de usuários.
+			listaDeEventos.add(evento);
+		}
+		conn.close();
+		return listaDeEventos;
+	}
 	
 
 }

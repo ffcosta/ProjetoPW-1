@@ -1,6 +1,7 @@
 (function () {
 	angular.module('MyApp').controller('EventosController', EventosController);
 
+
 	function EventosController($scope, eventosService) {
 
 		$scope.eventos = {
@@ -16,8 +17,6 @@
 
 		$scope.mensagemInfo = '';
 		$scope.mensagemDanger = '';
-
-
 
 		$scope.cadastrarEvento = function () {
 			eventosService.salvarEventos($scope.eventos)
@@ -41,6 +40,9 @@
 					$scope.mensagemDanger = 'Não foi possível alterar o evento';
 				});
 		};
+
+		
+
 
 	}
 })();

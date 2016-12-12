@@ -43,5 +43,12 @@ public class EventoController {
 	public void alterarEvento(Evento evento) throws SQLException {
 		EventoModel.alterar(evento);
 	}
+	
+	@POST
+	@Path("/selecionar")
+	@Consumes("application/json")
+	public void selecionarEvento(String categoria) throws SQLException {
+		EventoModel.selecionarEventos(categoria);
+	}
 
 }
