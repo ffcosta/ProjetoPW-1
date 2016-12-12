@@ -36,6 +36,7 @@ public class UsuarioModel {
 	    	Usuario usuario = new Usuario();
 	    	usuario.setUsuario(rs.getString("usuario"));
 	    	usuario.setSenha(rs.getString("senha"));
+	    	usuario.setCodigo(rs.getString("codigo"));
 	      // Adiciona o usuário na lista de usuários.
 	      listaDeContatos.add(usuario);
 	    }
@@ -48,10 +49,11 @@ public class UsuarioModel {
 
 			Connection conn = obterConexao();
 	
-			 String sql = "insert into admin.login values (?, ?)";
+			 String sql = "insert into admin.login values (?, ?, ?)";
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 	    	pstmt.setString(1, usuario.getUsuario());
 	   	 	pstmt.setString(2, usuario.getSenha());
+	   		pstmt.setString(3, usuario.getCodigo());
 	    	pstmt.execute();
 	    conn.close();
 	  }

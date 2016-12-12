@@ -8,10 +8,22 @@ function configurar($routeProvider) {
         })
         .when('/home/login', {
             templateUrl: 'views/login/page-login.html',
-            controller: 'MyAppCtrl'
+            controller: 'LoginController'
         })
         .when('/home/login/cadastro-login', {
             templateUrl: 'views/login/cadastro-login.html',
+            controller: 'UsersController'
+        })
+        .when('/home/cadastro-esporte', {
+            templateUrl: 'views/cadastro-esporte.html',
+            controller: 'EventosController'
+        })
+        .when('/home/eventos', {
+            templateUrl: 'views/eventos.html',
+            controller: 'TodosEventosController'
+        })
+        .when('/home/evento', {
+            templateUrl: 'views/evento.html',
             controller: 'MyAppCtrl'
         })
         .when('/futebol', {

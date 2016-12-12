@@ -4,7 +4,7 @@
             <h2><i>ENCONTRE SEU ESPORTE</i> <br /> <i>RÁPIDO E FÁCIL</i> <br /> <i>EXERCITE-SE HOJE</i></h2>
             <p><i>Inúmeros anúncios</i> <br /> <i>De esportes</i> <br /> <i>Profissionais e amadores</i>
                 <br /> <i>Para praticar e compertir</i></p>
-            <div class="da-img"><img class="img-responsive" src="assets/plugins/parallax-slider/img/1.png" alt=""></div>
+            <div class="da-img"><img class="img-responsive img-responsive" src="assets/plugins/parallax-slider/img/1.png" alt=""></div>
         </div>
         <div class="da-slide">
             <h2><i>RESPONSIVE VIDEO</i> <br /> <i>SUPPORT AND</i> <br /> <i>MANY MORE</i></h2>
@@ -40,7 +40,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-4">
-                    <img class="img-responsive margin-bottom-20" src="assets/img/esportes-2.png" alt="">
+                    <img class="img-responsive img-responsive margin-bottom-20" src="assets/img/esportes-2.png" alt="">
                 </div>
                 <div class="col-sm-8">
                     <p>Sports GO foi pensado como uma ferramenta para inovar sua visão sobre esporte, oferecendo:</p>
@@ -104,26 +104,29 @@
     <div class="headline">
         <h2>Eventos recentes</h2>
     </div>
+
     <div class="row margin-bottom-20">
-        <div class="col-md-3 col-sm-6">
+        <div class="col-md-3 col-sm-6" ng-repeat="evento in eventos">
             <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="assets/img/main/img1.jpg" alt="">
+                        <img class="img-responsive img-responsive" src="{{evento.foto}}" alt="">
                     </div>
-                    <a class="btn-more hover-effect" href="#">read more +</a>
+                    <a ng-click="carregarEvento(evento)" class="btn-more hover-effect" href="#/home/evento">Saiba mais</a>
                 </div>
                 <div class="caption">
-                    <h3><a class="hover-effect" href="#">Project One</a></h3>
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
+                    <h3><a class="hover-effect" href="#">{{evento.titulo}}</a></h3>
+                    <p>{{evento.descricao}}</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
+        </div>  
+        
+        
+        <!--<div class="col-md-3 col-sm-6">
             <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="assets/img/main/img12.jpg" alt="">
+                        <img class="img-responsive img-responsive" src="assets/img/main/img12.jpg" alt="">
                     </div>
                     <a class="btn-more hover-effect" href="#">read more +</a>
                 </div>
@@ -137,7 +140,7 @@
             <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="assets/img/main/img3.jpg" alt="">
+                        <img class="img-responsive img-responsive" src="assets/img/main/img3.jpg" alt="">
                     </div>
                     <a class="btn-more hover-effect" href="#">read more +</a>
                 </div>
@@ -151,7 +154,7 @@
             <div class="thumbnails thumbnail-style thumbnail-kenburn">
                 <div class="thumbnail-img">
                     <div class="overflow-hidden">
-                        <img class="img-responsive" src="assets/img/main/img17.jpg" alt="">
+                        <img class="img-responsive img-responsive" src="assets/img/main/img17.jpg" alt="">
                     </div>
                     <a class="btn-more hover-effect" href="#">read more +</a>
                 </div>
@@ -160,7 +163,7 @@
                     <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, justo sit amet risus etiam porta sem.</p>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 
     <div class="row col-md-12 headline">
@@ -173,7 +176,7 @@
                 <a href="#futebol">
                     <div class="desc">
                         <h5>Futebol</h5>
-                        <img class="img-categoria" src="lib/img/bola.png" />
+                        <img class="img-responsive img-categoria" src="lib/img/bola.png" />
                     </div>
                 </a>
             </div>
@@ -183,7 +186,7 @@
                 <div class="desc">
                     <a href="#volei">
                         <h5>Vôlei</h5>
-                        <img class="img-categoria" src="lib/img/volei.png" />
+                        <img class="img-responsive img-categoria" src="lib/img/volei.png" />
                     </a>
                 </div>
             </div>
@@ -193,7 +196,7 @@
                 <div class="desc">
                     <a href="#basquete">
                         <h5>Basquetebol</h5>
-                        <img class="img-categoria" src="lib/img/basquete.png" />
+                        <img class="img-responsive img-categoria" src="lib/img/basquete.png" />
                     </a>
                 </div>
             </div>
@@ -203,7 +206,7 @@
                 <div class="desc">
                     <a href="#natacao">
                         <h5>Natação</h5>
-                        <img class="img-categoria" src="lib/img/natacao.png" />
+                        <img class="img-responsive img-categoria" src="lib/img/natacao.png" />
                     </a>
                 </div>
             </div>
@@ -216,7 +219,7 @@
                 <a href="#tenis">
                     <div class="desc">
                         <h5>Tênis</h5>
-                        <img class="img-categoria" src="lib/img/tenis.png" />
+                        <img class="img-responsive img-categoria" src="lib/img/tenis.png" />
                     </div>
                 </a>
             </div>
@@ -226,7 +229,7 @@
                 <div class="desc">
                     <a href="#atletismo" />
                     <h5>Atletismo</h5>
-                    <img class="img-categoria" src="lib/img/corrida.png" />
+                    <img class="img-responsive img-categoria" src="lib/img/corrida.png" />
                     </a>
                 </div>
             </div>
@@ -236,7 +239,7 @@
                 <div class="desc">
                     <a href="#skate">
                         <h5>Skate</h5>
-                        <img class="img-categoria" src="lib/img/skate.png" />
+                        <img class="img-responsive img-categoria" src="lib/img/skate.png" />
                     </a>
                 </div>
             </div>
@@ -246,7 +249,7 @@
                 <div class="desc">
                     <a href="#airsoft">
                         <h5>Airsoft</h5>
-                        <img class="img-categoria" src="lib/img/airsoft.png" />
+                        <img class="img-responsive img-categoria" src="lib/img/airsoft.png" />
                     </a>
                 </div>
             </div>

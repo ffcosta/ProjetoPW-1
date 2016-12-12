@@ -1,0 +1,61 @@
+<div class="container content">
+    <div class="col-md-6 col-md-offset-3">
+        <p ng-show="mensagemInfo.length" class="alert alert-info">
+            {{mensagemInfo}}
+        </p>
+        <p ng-show="mensagemDanger.length" class="alert alert-danger">
+            {{mensagemDanger}}
+        </p>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 well">
+            <h2 class="text-center">Cadastre um evento</h2>
+            <form name="formEvento" class="center-block">
+                <div class="form-group">
+                    <label for="codigo">Código</label>
+                    <input class="form-control" type="text" name="codigo" id="codigo" ng-model="eventos.codigo"> 
+                </div>
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input class="form-control" type="text" name="titulo" id="titulo" ng-model="eventos.titulo">
+                </div>
+                <div class="form-group">
+                    <label for="responsavel">Responsável</label>
+                    <input class="form-control" type="text" name="responsavel" id="responsavel" ng-model="eventos.responsavel">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço</label>
+                    <input class="form-control" type="text" name="endereco" id="endereco" ng-model="eventos.endereco">
+                </div>
+                <div class="form-group">
+                    <label for="data">Data</label>
+                    <input class="form-control" type="text" ng-model="data" name="data" id="data" ng-model="eventos.data">
+                </div>
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <input class="form-control" type="text" ng-model="categoria" name="categoria" id="categoria" ng-model="eventos.categoria">
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea rows="7" cols="50" class="form-control" type="text" name="descricao" id="descricao" ng-model="eventos.descricao"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="foto">URL Foto</label>
+                    <input class="form-control" type="text" name="foto" id="foto" ng-model="eventos.foto">
+                </div>
+                <div class="form-group">
+                    <a href=""><input ng-click="cadastrarEvento()" class="form-control btn btn-primary" type="submit" name="salvar"
+                            value="Salvar"></a>
+                </div>
+                <div class="form-group">
+                    <input type="reset" class="form-control btn btn-warning" name="reset" value="Limpar Formulário">
+                </div>
+                <div class="form-group">
+                    <a href="" ng-click="alterarEvento()">
+                        <input type="button" class="form-control btn btn-success" name="alterar" value="Alterar">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

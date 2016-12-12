@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="container text-center col-md-4 col-md-offset-4">
+        <p ng-if="mensagemInfo.length" class="alert alert-info">
+            {{mensagemInfo}}
+        </p>
+        <p ng-if="mensagemDanger.length" class="alert alert-danger">
+            {{mensagemDanger}}
+        </p>
+    </div>
+    <div class="container text-center col-md-4 col-md-offset-4">
+
+        <div>
+            <h1>Eventos cadastrados</h1>
+        </div>
+    </div>
+
+    <div class="well container text-center col-md-4 col-md-offset-4">
+
+
+        <h2 ng-bind="eventos.titulo"></h2>
+        <figure>
+            <img class="img-responsive" src="{{eventos.foto}}" alt="">
+            <figcaption></figcaption>
+        </figure>
+        <p ng-bind="eventos.descricao"></p>
+        <div>
+            <p>Endereço: {{eventos.endereco}}</p>
+            <p>Data: {{eventos.data}}</p>
+            <p>Responsável: {{eventos.responsavel}}</p>
+            <p>Código: {{eventos.codigo}} </p>
+        </div>
+        <div>
+            <a href="#/home/evento">
+                <i ng-click="removerEvento(evento)" class="col-md-3 col-md-offset-3 fa fa-times fa-3x" aria-hidden="true"></i>
+            </a>
+
+
+            <a href="#/home/cadastro-esporte">
+                <i class="col-md-3 fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
+            </a>
+        </div>
+    </div>
+    <a href="#/home">
+        <button type="button" class="expandir col-md-4 col-md-offset-4 btn btn-danger">Voltar</button>
+    </a>
+</div>

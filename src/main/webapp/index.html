@@ -48,8 +48,16 @@
 	<!-- Angular -->
 	<script src="lib/js/angular/angular.js"></script>
 	<script src="lib/js/angular/angular-route.js"></script>
+	<script src="lib/js/angular/angular-animate.min.js"></script>
 	<script src="lib/js/MyApp.js"></script>
+	<script src="lib/js/services/eventosService.js"></script>
+	<script src="lib/js/services/usersService.js"></script>
+	<script src="lib/js/services/loginService.js"></script>
 	<script src="lib/js/controllers/MyAppCtrl.js"></script>
+	<script src="lib/js/controllers/EventosController.js"></script>
+	<script src="lib/js/controllers/UsersController.js"></script>
+	<script src="lib/js/controllers/LoginController.js"></script>
+	<script src="lib/js/controllers/TodosEventosController.js"></script>	
 	
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
@@ -98,6 +106,7 @@
 						<li><a href="page_faq.html">Ajuda</a></li>
 						<li class="topbar-devider"></li>
 						<li><a href="#/home/login">Logar</a></li>
+						<li>{{user.usuario}}</li>
 					</ul>
 				</div>
 				<!-- End Topbar -->
@@ -333,7 +342,10 @@
 
 									<!-- Todos Menu -->
 									<li>
-										<a href="eventsSecondSemester2016.html">Todos</a>
+										<a href="#/home/eventos">Todos</a>
+									</li>
+									<li>
+										<a href="#/home/cadastro-esporte">Cadastro</a>
 									</li>
 									<!-- Fim todos -->
 							</ul>

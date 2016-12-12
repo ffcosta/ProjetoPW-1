@@ -15,6 +15,7 @@ public class RestEasyApplication extends Application {
   }
   
   public RestEasyApplication() {
+	 singletons.add(new EventoController());
     singletons.add(new UsuarioController());
   }
   

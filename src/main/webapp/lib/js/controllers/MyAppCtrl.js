@@ -2,21 +2,38 @@
     angular.module('MyApp')
         .controller('MyAppCtrl', MyAppCtrl);
 
-    function MyAppCtrl($scope, $http) {
-
-        $scope.user = {
-			'usuario' : '',
-			'senha' : ''
-		};
+    function MyAppCtrl($scope, eventosService, usersService) {
 
 
-        $scope.cadastrar = function () {
-            $http.post('http://localhost:9090/angular/api/usuarios/cadastrar', $scope.user)
+
+        $scope.eventos = {
+            'titulo': '',
+            'responsavel': '',
+            'endereco': '',
+            'data': '',
+            'categoria': '',
+            'descricao': '',
+            'foto': '',
+            'codigo': ''
+        };
+
+
+        $scope.listar = function () {
+            eventosService.getEventos()     // eventosService é um serviço criado para requisições http
                 .then(function (response) {
-                    $scope.user = response.data;
-                }, function(erro){
+                    $scope.eventos = response.data;
+                }, function (erro) {
                     console.log(erro);
-                }); 
-        }
+                });
+        };
+
+        $scope.listar();        // Carregando eventos na página index.html
+
+      $scope.carregarEvento = function(evento){
+          $scope.eventos = evento;
+      }
+
+
+
     }
 })();
