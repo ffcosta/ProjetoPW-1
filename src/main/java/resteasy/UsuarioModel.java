@@ -36,7 +36,7 @@ public class UsuarioModel {
 	    	Usuario usuario = new Usuario();
 	    	usuario.setUsuario(rs.getString("usuario"));
 	    	usuario.setSenha(rs.getString("senha"));
-	    	usuario.setCodigo(rs.getString("codigo"));
+	    	usuario.setCodigo(rs.getInt("codigo"));
 	      // Adiciona o usuário na lista de usuários.
 	      listaDeContatos.add(usuario);
 	    }
@@ -49,11 +49,10 @@ public class UsuarioModel {
 
 			Connection conn = obterConexao();
 	
-			 String sql = "insert into admin.login values (?, ?, ?)";
+			 String sql = "insert into admin.login (usuario,senha) values (?, ?)";
 				PreparedStatement pstmt = conn.prepareStatement(sql);
 	    	pstmt.setString(1, usuario.getUsuario());
 	   	 	pstmt.setString(2, usuario.getSenha());
-	   		pstmt.setString(3, usuario.getCodigo());
 	    	pstmt.execute();
 	    conn.close();
 	  }
@@ -61,10 +60,11 @@ public class UsuarioModel {
 	 public static void alterar(Usuario usuario) throws SQLException {
 		    //Obter sentença SQL.
 		 	Connection conn = obterConexao();
-		    String sql = "update admin.contato set usuario = ? where senha = ?";
+		    String sql = "update admin.contato set usuario = ?, senha = ? where codigo =?";
 		    PreparedStatement pstmt = conn.prepareStatement(sql);
 		    pstmt.setString(1, usuario.getUsuario());
 		    pstmt.setString(2, usuario.getSenha());
+		    pstmt.setInt(3, usuario.getCodigo());
 		    pstmt.execute();
 		    conn.close();
 		  }		
@@ -74,9 +74,9 @@ public class UsuarioModel {
 		   Connection conn = obterConexao();
 		    
 		    //Obter sentença SQL.
-		    String sql = "delete from admin.login where senha = ?";
+		    String sql = "delete from admin.login where codigo = ?";
 		    PreparedStatement pstmt = conn.prepareStatement(sql);
-		    pstmt.setString(1, contato.getSenha());
+		    pstmt.setInt(1, contato.getCodigo());
 		    pstmt.execute();
 		    
 		    conn.close();

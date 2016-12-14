@@ -11,10 +11,10 @@
         <div class="col-md-6 col-md-offset-3 well">
             <h2 class="text-center">Cadastre um evento</h2>
             <form name="formEvento" class="center-block">
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="codigo">Código</label>
                     <input class="form-control" type="text" name="codigo" id="codigo" ng-model="eventos.codigo"> 
-                </div>
+                </div>-->
                 <div class="form-group">
                     <label for="titulo">Título</label>
                     <input class="form-control" type="text" name="titulo" id="titulo" ng-model="eventos.titulo">
@@ -29,11 +29,17 @@
                 </div>
                 <div class="form-group">
                     <label for="data">Data</label>
-                    <input class="form-control" type="text" ng-model="data" name="data" id="data" ng-model="eventos.data">
+                    <input class="form-control" type="date"  name="data" id="data" ng-model="eventos.data">
                 </div>
-                <div class="form-group">
+                <!--<div class="form-group">
                     <label for="categoria">Categoria</label>
                     <input class="form-control" type="text" ng-model="categoria" name="categoria" id="categoria" ng-model="eventos.categoria">
+                </div>-->
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <select class="form-control" type="text" name="categoria" id="categoria" ng-model="eventos.categoria" ng-options="categoria for categoria in categorias">
+                        <option value="">Selecione uma categoria</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="descricao">Descrição</label>

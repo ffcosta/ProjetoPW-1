@@ -4,7 +4,7 @@ public class Usuario {
 
 	private String usuario;
 	private String senha;
-	private String codigo;
+	private int codigo;
 	
 	public Usuario(){
 		
@@ -31,12 +31,12 @@ public class Usuario {
 	}
 
 
-	public String getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 

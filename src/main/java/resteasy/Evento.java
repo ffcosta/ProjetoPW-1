@@ -1,19 +1,21 @@
 package resteasy;
 
+import java.sql.Date;
+
 public class Evento {
 
 	private String titulo;
 	private String responsavel;
 	private String endereco;
-	private String data;
+	private Date data;
 	private String descricao;
 	private String foto;
-	private String codigo;
+	private int codigo;
 	private String categoria;
 	
 	public Evento() {}
 	
-	public Evento(String titulo, String responsavel, String endereco, String data, String descricao, String foto, String codigo, String categoria) {
+	public Evento(String titulo, String responsavel, String endereco, Date data, String descricao, String foto, int codigo, String categoria) {
 		this.setTitulo(titulo);
 		this.setResponsavel(responsavel);
 		this.setEndereco(endereco);
@@ -48,11 +50,11 @@ public class Evento {
 		this.endereco = endereco;
 	}
 
-	public String getData() {
+	public Date getData() {
 		return data;
 	}
 
-	public void setData(String data) {
+	public void setData(Date data) {
 		this.data = data;
 	}
 
@@ -64,11 +66,11 @@ public class Evento {
 		this.foto = foto;
 	}
 
-	public String getCodigo() {
+	public int getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(int codigo) {
 		this.codigo = codigo;
 	}
 

@@ -44,11 +44,11 @@ public class EventoController {
 		EventoModel.alterar(evento);
 	}
 	
-	@POST
+/*	@POST
 	@Path("/selecionar")
 	@Consumes("application/json")
 	public void selecionarEvento(String categoria) throws SQLException {
 		EventoModel.selecionarEventos(categoria);
-	}
+	}*/
 
 }

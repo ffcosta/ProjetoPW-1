@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Mon Dec 12 11:59:34 BRST 2016:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0158-f354-d9bf-00000addad48 
+Wed Dec 14 11:05:49 BRST 2016:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-0158-fd70-5cf0-00000a507a08 
 on database directory C:\Users\Aluno\git\ProjetoPW\login with class loader WebappClassLoader
   context: /angular
   delegate: false

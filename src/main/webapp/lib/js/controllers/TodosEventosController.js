@@ -1,6 +1,6 @@
 angular.module('MyApp').controller('TodosEventosController', TodosEventosController);
 
-function TodosEventosController($scope, eventosService) {
+function TodosEventosController($scope, eventosService, $location) {
 
     $scope.eventos = {
         'titulo': '',
@@ -12,6 +12,8 @@ function TodosEventosController($scope, eventosService) {
         'foto': '',
         'codigo': ''
     };
+
+
 
     $scope.mensagemInfo = '';
 	$scope.mensagemDanger = '';
@@ -40,6 +42,22 @@ function TodosEventosController($scope, eventosService) {
                 $scope.mensagemDanger = 'Não foi possível excluir o evento!'
             });
     };
+
+    $scope.carregarEventoEdit = function(evento){
+          _eventoSelecionado = evento;
+          $location.path('/home/cadastro-esporte');
+      }
+      
+
+      //var unregisterRouteChangeStart =
+       $scope.$on('$routeChangeStart', onRouteChangeStart);     // Escopo escutando o evento
+
+      function onRouteChangeStart(event, next, current) {       // Evento executado na rota
+          //unregisterRouteChangeStart();
+          if (next.originalPath === '/home/cadastro-esporte') {       // Verificando o caminho e passando o objeto para a próxima rota
+              next.params.evento = _eventoSelecionado;
+          }
+      }
 
     
 

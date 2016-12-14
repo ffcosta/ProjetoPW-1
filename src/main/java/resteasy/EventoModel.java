@@ -35,11 +35,11 @@ public class EventoModel {
 			evento.setTitulo(rs.getString("titulo"));
 			evento.setResponsavel(rs.getString("responsavel"));
 			evento.setEndereco(rs.getString("endereco"));
-			evento.setData(rs.getString("data"));
+			evento.setData(rs.getDate("data"));
 			evento.setCategoria(rs.getString("categoria"));
 			evento.setDescricao(rs.getString("descricao"));
 			evento.setFoto(rs.getString("foto"));
-			evento.setCodigo(rs.getString("codigo"));
+			evento.setCodigo(rs.getInt("codigo"));
 			// Adiciona o usuário na lista de usuários.
 			listaDeEventos.add(evento);
 		}
@@ -51,16 +51,15 @@ public class EventoModel {
 
 		Connection conn = obterConexao();
 
-		String sql = "insert into admin.evento values (?, ?, ?, ?, ?, ?, ?, ?)";
+		String sql = "insert into admin.evento (titulo,responsavel,endereco,data,categoria,descricao,foto) values (?, ?, ?, ?, ?, ?, ?)";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
 		pstmt.setString(1, evento.getTitulo());
 		pstmt.setString(2, evento.getResponsavel());
 		pstmt.setString(3, evento.getEndereco());
-		pstmt.setString(4, evento.getData());
+		pstmt.setDate(4, evento.getData());
 		pstmt.setString(5, evento.getCategoria());
 		pstmt.setString(6, evento.getDescricao());
 		pstmt.setString(7, evento.getFoto());
-		pstmt.setString(8, evento.getCodigo());
 		pstmt.execute();
 		conn.close();
 	}
@@ -72,7 +71,7 @@ public class EventoModel {
 		// Obter sentença SQL.
 		String sql = "delete from admin.evento where codigo = ?";
 		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, evento.getCodigo());
+		pstmt.setInt(1, evento.getCodigo());
 		pstmt.execute();
 
 		conn.close();
@@ -86,16 +85,16 @@ public class EventoModel {
 		pstmt.setString(1, evento.getTitulo());
 		pstmt.setString(2, evento.getResponsavel());
 		pstmt.setString(3, evento.getEndereco());
-		pstmt.setString(4, evento.getData());
+		pstmt.setDate(4, evento.getData());
 		pstmt.setString(5, evento.getCategoria());
 		pstmt.setString(6, evento.getDescricao());
 		pstmt.setString(7, evento.getFoto());
-		pstmt.setString(8, evento.getCodigo());
+		pstmt.setInt(8, evento.getCodigo());
 		pstmt.execute();
 		conn.close();
 	}
 	
-	public static List<Evento> selecionarEventos(String categoria) throws SQLException {
+	/*public static List<Evento> selecionarEventos(String categoria) throws SQLException {
 		Connection conn = obterConexao();
 
 		Statement stmt = conn.createStatement();
@@ -121,7 +120,7 @@ public class EventoModel {
 		}
 		conn.close();
 		return listaDeEventos;
-	}
+	}*/
 	
 
 }

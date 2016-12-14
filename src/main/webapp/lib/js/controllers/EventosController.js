@@ -2,7 +2,7 @@
 	angular.module('MyApp').controller('EventosController', EventosController);
 
 
-	function EventosController($scope, eventosService) {
+	function EventosController($scope, eventosService, $routeParams, $filter) {
 
 		$scope.eventos = {
 			'titulo': '',
@@ -15,8 +15,14 @@
 			'codigo': ''
 		};
 
+		$scope.categorias = ['futebol','voleibol','natacao','tenis','skate','airsoft','atletismo','basquetebol'];
+
 		$scope.mensagemInfo = '';
 		$scope.mensagemDanger = '';
+
+		var evt = $routeParams.evento;
+    	$scope.eventos = evt;
+	
 
 		$scope.cadastrarEvento = function () {
 			eventosService.salvarEventos($scope.eventos)
