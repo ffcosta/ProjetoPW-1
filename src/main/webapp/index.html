@@ -59,6 +59,7 @@
 	<script src="lib/js/controllers/LoginController.js"></script>
 	<script src="lib/js/controllers/TodosEventosController.js"></script>
 	<script src="lib/js/controllers/EventoController.js"></script>
+	<script src="lib/js/controllers/IndexController.js"></script>
 
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
@@ -79,7 +80,7 @@
 
 </head>
 
-<body>
+<body ng-controller="IndexController">
 	<div class="back wrapper">
 		<!--=== Header ===-->
 		<div class="header">
@@ -120,9 +121,7 @@
 				</button>
 				<!-- End Toggle -->
 			</div>
-			<!--/end container-->
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
 				<div class="container">
 					<ul class="col-md-10 nav navbar-nav">
@@ -137,172 +136,45 @@
 
 								<!-- FutebolPAG -->
 								<li>
-									<a href="#/home/futebol">
-										 Futebol
+									<a href="#/home/{{categoria}}" ng-repeat="categoria in categorias">
+										 {{categoria}}
 									</a>
 								</li>
-								<!-- FutebolPAG -->
-
-								<!-- BasquetebolPAG -->
-								<li>
-									<a href="#/home/basquete">
-										 Basquetebol
-									</a>
-								</li>
-								<!-- BasquetebolPAG -->
-
-								<!-- VoleibolPAG -->
-								<li>
-									<a href="#/home/volei">
-										 Voleibol
-									</a>
-
-								</li>
-								<!-- VoleibolPAG -->
-
-								<!-- NataçãoPAG -->
-								<li>
-									<a href="#/home/natacao">
-										 Natação
-									</a>
-
-								</li>
-								<!-- NataçãoPAG -->
-
-								<!-- TenisPAG -->
-								<li>
-									<a href="#/home/tenis">
-									 Tênis
-									</a>
-								</li>
-								<!-- TenisPAG -->
-
-								<!-- AtletismoPAG -->
-								<li>
-									<a href="#/home/atletismo">
-										 Atletismo
-									</a>
-
-								</li>
-								<!-- AtletismoPPAG -->
-
-								<!-- SkatePAG -->
-								<li>
-									<a href="#/home/skate">
-										 Skate
-									</a>
-
-								</li>
-								<!-- SkatePAG -->
-
-								<!-- AirSoftPAG -->
-								<li>
-									<a href="#/home/airsoft">
-										 Air Soft
-									</a>
-
-								</li>
-								<!-- AirSoftPAG -->
-
-
 							</ul>
 						</li>
-						<!-- End Home -->
 
-						<!-- Events -->
 						<li class="dropdown">
 							<a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">
                                 Eventos
                             </a>
 							<ul class="dropdown-menu">
-								<!-- All -->
-								<!-- <li><a href="">Inserir Evento</a></li> -->
-								<!-- End All -->
 
-								<!-- Por esporte -->
 								<li class="dropdown-submenu">
 									<a href="javascript:void(0);">Por Esporte</a>
 									<ul class="dropdown-menu">
 
-										<!-- FutebolNews -->
+
 										<li>
-											<a href="">
-												 Futebol
+											<a href="#/home/eventosPorCategoria" ng-repeat="categoria in categorias" ng-click="carregarCategoria(categoria)">
+												 {{categoria}}
 											</a>
 										</li>
-										<!-- End FutebolNews -->
 
-										<!-- BasquetebolNews -->
-										<li>
-											<a href="">
-												 Basquetebol
-											</a>
-										</li>
-										<!--End BasquetebolNews -->
-
-										<!--VoleibolNews -->
-										<li>
-											<a href="">
-												 Voleibol
-											</a>
-										</li>
-										<!--End VoleibolNews -->
-
-										<!-- NataçãoNews-->
-										<li>
-											<a href="">
-												 Natação
-											</a>
-										</li>
-										<!--end NataçãoNews-->
-
-										<!-- TenisNews -->
-										<li>
-											<a href="">
-												 Tênis
-											</a>
-										</li>
-										<!-- End NataçãoNews -->
-
-										<!-- AtletismoNews -->
-										<li>
-											<a href="">
-												 Atletismo
-											</a>
-										</li>
-										<!-- End AtletismoNews-->
-
-										<!-- SkateSub -->
-										<li>
-											<a href="">
-											 Skate
-											</a>
-										</li>
-										<!-- End SkateNews -->
-
-										<!-- AirSoftSub -->
-										<li>
-											<a href="">
-												Air Soft
-											</a>
-											<!--End AirSoftNews -->
+										
 
 									</ul>
 									</li>
-									<!-- End Por Esporte -->
 
-									<!-- Todos Menu -->
 									<li>
 										<a href="#/home/eventos">Todos</a>
 									</li>
 									<li>
 										<a href="#/home/cadastro-esporte">Cadastro</a>
 									</li>
-									<!-- Fim todos -->
+								
 							</ul>
 							</li>
-							<!-- End  -->
-							<!-- Search Block -->
+
 							<li class="pull-right">
 								<i class="search fa fa-search search-btn"></i>
 								<div class="search-open">
@@ -314,16 +186,10 @@
 									</div>
 								</div>
 							</li>
-							<!-- End Search Block -->
 					</ul>
 				</div>
-				<!--/end container-->
 			</div>
-			<!--/navbar-collapse-->
 		</div>
-		<!--=== End Header ===-->
-
-		<!-- View das rotas -->
 
 		<ng-view>
 

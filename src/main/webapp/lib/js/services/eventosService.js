@@ -17,11 +17,18 @@ function eventosService($http) {
 		return $http.post('http://localhost:9090/angular/api/eventos/alterar', evento);
 	}
 
+	var _selecionarEventos = function(categoria) {
+		return $http
+			.get('http://localhost:9090/angular/api/eventos/selecionar',{eventoCategoria : categoria}
+		);
+	}
+
 
 	return {
 		getEventos : _getEventos,
 		salvarEventos : _salvarEventos,
 		removerEventos : _removerEventos,
-		alterarEventos : _alterarEventos
+		alterarEventos : _alterarEventos,
+		selecionarEventos : _selecionarEventos
 	};
 }

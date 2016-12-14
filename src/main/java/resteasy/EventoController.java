@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -44,11 +45,13 @@ public class EventoController {
 		EventoModel.alterar(evento);
 	}
 	
-/*	@POST
+	@GET
 	@Path("/selecionar")
-	@Consumes("application/json")
-	public void selecionarEvento(String categoria) throws SQLException {
-		EventoModel.selecionarEventos(categoria);
-	}*/
+	@Produces("application/json")
+	public List<Evento> selecionarEvento(@QueryParam("categoria") String categoria) throws SQLException {
+		listaDeEventos = EventoModel.selecionarEventos(categoria);
+		System.out.print(categoria);
+		return listaDeEventos;
+	}
 
 }

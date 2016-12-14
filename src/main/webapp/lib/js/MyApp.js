@@ -26,38 +26,46 @@ function configurar($routeProvider) {
             templateUrl: 'views/evento.html',
             controller: 'EventoController'
         })
-        .when('/home/futebol', {
+        .when('/home/eventosPorCategoria', {
+            templateUrl: 'views/eventosPorCategoria.html',
+            controller: 'IndexController'
+        })
+        .when('/home/Futebol', {
             templateUrl: 'views/esportes/futebol.html',
             controller: 'MyAppCtrl'
         })
-        .when('/home/airsoft', {
+        .when('/home/Airsoft', {
             templateUrl: 'views/esportes/airsoft.html',
             controller: 'MyAppCtrl'
         })
-        .when('/home/volei', {
+        .when('/home/Voleibol', {
             templateUrl: 'views/esportes/volei.html',
             controller: 'MyAppCtrl'
         })
-        .when('/home/atletismo', {
+        .when('/home/Atletismo', {
             templateUrl: 'views/esportes/atletismo.html',
             controller: 'MyAppCtrl'
         })
-        .when('/home/basquete', {
+        .when('/home/Basquetebol', {
             templateUrl: 'views/esportes/basquete.html',
             controller: 'MyAppCtrl'
         })
-        .when('/home/natacao', {
+        .when('/home/Natação', {
             templateUrl: 'views/esportes/natacao.html',
             controller: 'MyAppCtrl'
         })
-        .when('/home/skate', {
+        .when('/home/Skate', {
             templateUrl: 'views/esportes/skate.html',
             controller: 'MyAppCtrl'
         })
-        .when('/home/tenis', {
+        .when('/home/Tênis', {
             templateUrl: 'views/esportes/tenis.html',
             controller: 'MyAppCtrl'
         });
 
     $routeProvider.otherwise({redirectTo: '/home'});
 }
+
+
+
+

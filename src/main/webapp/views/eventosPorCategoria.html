@@ -25,13 +25,12 @@
             <img class="img-responsive" src="{{evento.foto}}" alt="">
             <figcaption></figcaption>
         </figure>
+        <p ng-bind="evento.descricao"></p>
         <div>
             <p>Endereço: {{evento.endereco}}</p>
             <p>Data: {{evento.data}}</p>
-            <p>Categoria: {{evento.categoria}}</p>
             <p>Responsável: {{evento.responsavel}}</p>
             <p>Código: {{evento.codigo}} </p>
-            <p>Descricao: {{evento.descricao}}</p>
         </div>
         <div>
             <a href="#/home/eventos">

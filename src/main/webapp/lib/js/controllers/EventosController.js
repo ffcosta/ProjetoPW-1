@@ -15,7 +15,7 @@
 			'codigo': ''
 		};
 
-		$scope.categorias = ['futebol','voleibol','natacao','tenis','skate','airsoft','atletismo','basquetebol'];
+		$scope.categorias = ['Futebol','Voleibol','Natação','Tênis','Skate','Airsoft','Atletismo','Basquetebol'];
 
 		$scope.mensagemInfo = '';
 		$scope.mensagemDanger = '';

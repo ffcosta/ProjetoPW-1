@@ -8,11 +8,11 @@
 
 				<div class="input-group margin-bottom-20">
 					<span class="input-group-addon"><i class="fa fa-user"></i></span>
-					<input type="text" placeholder="Usuário" name="usuario" class="form-control">
+					<input type="text" placeholder="Usuário" name="usuario" class="form-control" ng-model="user.usuario">
 				</div>
 				<div class="input-group margin-bottom-20">
 					<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-					<input type="password" placeholder="Senha" name="senha" class="form-control">
+					<input type="password" placeholder="Senha" name="senha" class="form-control" ng-model="user.senha">
 				</div>
 
 				<div class="row">
@@ -20,9 +20,7 @@
 						<label><input type="checkbox">Manter conectado</label>
 					</div>
 					<div class="col-md-6">
-						<a id="logando" href="#">
-							<input ng-click="logar()" type="button" class="btn-primary btn btn-block pull-right" type="submit" value="Logar" id="logar">
-						</a>
+						<input ng-click="logar(user)" type="button" class="btn-primary btn btn-block pull-right" type="submit" value="Logar" id="logar">
 					</div>
 				</div>
 				<hr>

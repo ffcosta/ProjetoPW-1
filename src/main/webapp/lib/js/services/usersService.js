@@ -6,8 +6,13 @@ function usersService($http) {
 		return $http.post('http://localhost:9090/angular/api/usuarios/cadastrar', usuario);
 	}
 	
+	var _retornarUsers = function(){
+		return $http.get('http://localhost:9090/angular/api/usuarios/todos');
+	}
+
 	return {
-		salvarUsers : _salvarUsers
+		salvarUsers : _salvarUsers,
+		retornarUsers : _retornarUsers
 	};
 
 }

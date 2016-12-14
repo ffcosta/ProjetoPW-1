@@ -93,14 +93,42 @@ public class EventoModel {
 		pstmt.execute();
 		conn.close();
 	}
-	
-	/*public static List<Evento> selecionarEventos(String categoria) throws SQLException {
+
+	public static List<Evento> selecionarEventos(String categoria) throws SQLException {
+
 		Connection conn = obterConexao();
 
+		String sql = "";
+
+		switch (categoria) {
+		case "Futebol":
+			sql = "select * from admin.evento where categoria = 'Futebol'";
+			break;
+		case "Voleibol":
+			sql = "select * from admin.evento where categoria = 'Voleibol'";
+			break;
+		case "Basquetebol":
+			sql = "select * from admin.evento where categoria = 'Basquetebol'";
+			break;
+		case "Natação":
+			sql = "select * from admin.evento where categoria = 'Natação'";
+			break;
+		case "Tênis":
+			sql = "select * from admin.evento where categoria = 'Tênis'";
+			break;
+		case "Airsoft":
+			sql = "select * from admin.evento where categoria = 'Airsoft'";
+			break;
+		case "Atletismo":
+			sql = "select * from admin.evento where categoria = 'Atletismo'";
+			break;
+		case "Skate":
+			sql = "select * from admin.evento where categoria = 'Skate'";
+			break;
+		}
+
 		Statement stmt = conn.createStatement();
-		String sql = "select * from admin.evento where categoria = ?";
-		PreparedStatement pstmt = conn.prepareStatement(sql);
-		pstmt.setString(1, categoria);
+
 		ResultSet rs = stmt.executeQuery(sql);
 
 		List<Evento> listaDeEventos = new ArrayList<Evento>();
@@ -110,17 +138,16 @@ public class EventoModel {
 			evento.setTitulo(rs.getString("titulo"));
 			evento.setResponsavel(rs.getString("responsavel"));
 			evento.setEndereco(rs.getString("endereco"));
-			evento.setData(rs.getString("data"));
+			evento.setData(rs.getDate("data"));
 			evento.setCategoria(rs.getString("categoria"));
 			evento.setDescricao(rs.getString("descricao"));
 			evento.setFoto(rs.getString("foto"));
-			evento.setCodigo(rs.getString("codigo"));
+			evento.setCodigo(rs.getInt("codigo"));
 			// Adiciona o usuário na lista de usuários.
 			listaDeEventos.add(evento);
 		}
 		conn.close();
 		return listaDeEventos;
-	}*/
-	
+	}
 
 }
