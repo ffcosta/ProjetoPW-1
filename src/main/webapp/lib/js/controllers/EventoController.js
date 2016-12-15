@@ -2,7 +2,7 @@ angular.module('MyApp').controller('EventoController',EventoController );
 
 
 
-function EventoController($scope, $routeParams, $location, eventosService){
+function EventoController($scope, $routeParams, $location, eventosService, $rootScope){
   
     var _eventoSelecionado = null;
 

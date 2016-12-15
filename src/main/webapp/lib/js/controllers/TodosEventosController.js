@@ -1,6 +1,6 @@
 angular.module('MyApp').controller('TodosEventosController', TodosEventosController);
 
-function TodosEventosController($scope, eventosService, $location) {
+function TodosEventosController($scope, eventosService, $location, $rootScope) {
 
     $scope.eventos = {
         'titulo': '',

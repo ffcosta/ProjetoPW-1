@@ -60,6 +60,7 @@
 	<script src="lib/js/controllers/TodosEventosController.js"></script>
 	<script src="lib/js/controllers/EventoController.js"></script>
 	<script src="lib/js/controllers/IndexController.js"></script>
+	<script src="lib/js/controllers/EventosHistoricoController.js"></script>
 
 	<!-- JS Global Compulsory -->
 	<script type="text/javascript" src="assets/plugins/jquery/jquery.min.js"></script>
@@ -108,8 +109,12 @@
 						<li class="topbar-devider"></li>
 						<li><a href="page_faq.html">Ajuda</a></li>
 						<li class="topbar-devider"></li>
-						<li><a href="#/home/login">Logar</a></li>
-						<li>{{user.usuario}}</li>
+						<li>
+							<i class="icon-user"></i>
+							<a ng-if="!usuarioLogado.usuario.length" href="#/home/login">Logar</a>
+						</li>
+						<li>{{usuarioLogado.usuario}}</li>
+						<li><i ng-if="usuarioLogado.usuario.length" ng-click="logout()" class="icon-close"></i></li>
 					</ul>
 				</div>
 				<!-- End Topbar -->
@@ -168,8 +173,11 @@
 									<li>
 										<a href="#/home/eventos">Todos</a>
 									</li>
-									<li>
+									<li ng-if="usuarioLogado.usuario.length">
 										<a href="#/home/cadastro-esporte">Cadastro</a>
+									</li>
+									<li ng-if="usuarioLogado.usuario.length">
+										<a href="#/home/eventosHistorico">Histórico</a>
 									</li>
 								
 							</ul>

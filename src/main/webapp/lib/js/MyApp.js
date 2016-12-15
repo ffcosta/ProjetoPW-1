@@ -30,6 +30,10 @@ function configurar($routeProvider) {
             templateUrl: 'views/eventosPorCategoria.html',
             controller: 'IndexController'
         })
+        .when('/home/eventosHistorico', {
+            templateUrl: 'views/eventosHistorico.html',
+            controller: 'EventosHistoricoController'
+        })
         .when('/home/Futebol', {
             templateUrl: 'views/esportes/futebol.html',
             controller: 'MyAppCtrl'

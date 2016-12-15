@@ -3,7 +3,7 @@
 angular.module('MyApp').controller('IndexController', IndexController);
 
 
-    function IndexController($scope, eventosService, $rootScope) {
+    function IndexController($scope, eventosService, $rootScope, loginService) {
 
 
     $scope.eventos = {
@@ -20,25 +20,11 @@ angular.module('MyApp').controller('IndexController', IndexController);
     $scope.categorias = ['Futebol','Voleibol','Natação','Tênis','Skate','Airsoft','Atletismo','Basquetebol'];
 
     $scope.carregarCategoria = function(categoria){
-        $scope.categoriaSelecionada = categoria;
-        $scope.listar();
+        $rootScope.categoriaSelecionada = categoria;
     }
 
     $scope.mensagemInfo = '';
 	$scope.mensagemDanger = '';
-
-    $scope.listar = function () {
-        eventosService.getEventos()     // eventosService é um serviço criado para requisições http
-            .then(function (response) {
-                $scope.eventos = response.data;
-                console.log("Exibindo lista");
-                console.log(response.data);
-            }, function (erro) {
-                console.log(erro);
-            });
-    };
-
-    
 
     $scope.removerEvento = function (evento) {
         eventosService.removerEventos(evento)
@@ -53,6 +39,9 @@ angular.module('MyApp').controller('IndexController', IndexController);
             });
     };
 
+    $scope.logout = function(){
+        loginService.logout();
+    }
 
     
 

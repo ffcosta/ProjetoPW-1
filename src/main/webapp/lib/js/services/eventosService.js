@@ -19,7 +19,7 @@ function eventosService($http) {
 
 	var _selecionarEventos = function(categoria) {
 		return $http
-			.get('http://localhost:9090/angular/api/eventos/selecionar',{eventoCategoria : categoria}
+			.get('http://localhost:9090/angular/api/eventos/selecionar',{evento : categoria}
 		);
 	}
 

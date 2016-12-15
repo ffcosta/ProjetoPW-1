@@ -31,12 +31,12 @@
             <p>Descricao: {{eventos.descricao}}</p>
         </div>
         <div>
-            <a href="#/home" ng-click="removerEvento(eventos)">
+            <a ng-if="usuarioLogado.usuario.length" href="#/home" ng-click="removerEvento(eventos)">
                 <i class="col-md-3 col-md-offset-3 fa fa-times fa-3x" aria-hidden="true"></i>
             </a>
 
 
-            <a href="#/home/cadastro-esporte" ng-click="carregarEventoEdit(eventos)">
+            <a ng-if="usuarioLogado.usuario.length" href="#/home/cadastro-esporte" ng-click="carregarEventoEdit(eventos)">
                 <i class="col-md-3 fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
             </a>
         </div>
