@@ -15,8 +15,7 @@ public class EventoModel {
 
 	private static Connection obterConexao() throws SQLException {
 		// Estabelecer uma conexão com o banco de dados.
-		// String user = "pwuser";
-		// String password = "12345678";
+	
 		Connection conn = DriverManager.getConnection(URLL);
 		return conn;
 	}

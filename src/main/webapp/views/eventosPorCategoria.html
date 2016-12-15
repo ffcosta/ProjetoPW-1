@@ -12,12 +12,9 @@
         <div>
             <h1>Eventos cadastrados</h1>
         </div>
-        <div class="form-group expandir">
-            <input class="form-control" type="search" name="seach" id="search" ng-model="search" placeholder="Pesquisar">
-        </div>
     </div>
 
-    <div class="evento-animado well container text-center col-md-4 col-md-offset-4" ng-repeat="evento in eventos | filter: search">
+    <div class="evento-animado well container text-center col-md-4 col-md-offset-4" ng-repeat="evento in eventos">
 
 
         <h2 ng-bind="evento.titulo"></h2>
@@ -33,12 +30,12 @@
             <p>Código: {{evento.codigo}} </p>
         </div>
         <div>
-            <a href="#/home/eventos">
+            <a ng-if="usuarioLogado.usuario.length" href="#/home/eventos">
                 <i ng-click="removerEvento(evento)" class="col-md-3 col-md-offset-3 fa fa-times fa-3x" aria-hidden="true"></i>
             </a>
 
 
-            <a href="#/home/cadastro-esporte" ng-click="carregarEventoEdit(evento)">
+            <a ng-if="usuarioLogado.usuario.length" href="#/home/cadastro-esporte" ng-click="carregarEventoEdit(evento)">
                 <i class="col-md-3 fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
             </a>
         </div>

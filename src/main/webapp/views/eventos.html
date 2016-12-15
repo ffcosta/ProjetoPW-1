@@ -17,7 +17,7 @@
         </div>
     </div>
 
-    <div class="evento-animado well container text-center col-md-4 col-md-offset-4" ng-repeat="evento in eventos | filter: search">
+    <div class="sumir evento-animado well container text-center col-md-4 col-md-offset-4" ng-repeat="evento in eventos | filter: search">
 
 
         <h2 ng-bind="evento.titulo"></h2>
@@ -27,7 +27,7 @@
         </figure>
         <div>
             <p>Endereço: {{evento.endereco}}</p>
-            <p>Data: {{evento.data}}</p>
+            <p>Data: {{evento.data | date : "MM/dd/yyyy"}}</p>
             <p>Categoria: {{evento.categoria}}</p>
             <p>Responsável: {{evento.responsavel}}</p>
             <p>Código: {{evento.codigo}} </p>

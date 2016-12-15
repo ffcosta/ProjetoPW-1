@@ -14,7 +14,6 @@ function TodosEventosController($scope, eventosService, $location, $rootScope) {
     };
 
 
-
     $scope.mensagemInfo = '';
 	$scope.mensagemDanger = '';
 

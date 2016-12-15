@@ -32,6 +32,7 @@ $scope.removerEvento = function (evento) {
             });
     };
 
+
      $scope.carregarEventoEdit = function(evento){
           _eventoSelecionado = evento;
           $location.path('/home/cadastro-esporte');

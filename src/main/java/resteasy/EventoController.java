@@ -50,7 +50,6 @@ public class EventoController {
 	@Produces("application/json")
 	public List<Evento> selecionarEvento(@QueryParam("categoria") String categoria) throws SQLException {
 		listaDeEventos = EventoModel.selecionarEventos(categoria);
-		System.out.print(categoria);
 		return listaDeEventos;
 	}
 

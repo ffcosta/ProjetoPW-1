@@ -1,4 +1,4 @@
-angular.module('MyApp', ['ngRoute']).config(configurar);
+angular.module('MyApp', ['ngAnimate','ngRoute']).config(configurar);
 
 function configurar($routeProvider) {
     $routeProvider
@@ -28,7 +28,7 @@ function configurar($routeProvider) {
         })
         .when('/home/eventosPorCategoria', {
             templateUrl: 'views/eventosPorCategoria.html',
-            controller: 'IndexController'
+            controller: 'EventoPorCategoriaController'
         })
         .when('/home/eventosHistorico', {
             templateUrl: 'views/eventosHistorico.html',

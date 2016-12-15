@@ -1,6 +1,8 @@
-angular.module('MyApp').controller('EventoPorCategoriaController', EventoPorCategoriaController);
+(function(){
+    angular.module('MyApp')
+    .controller('EventoPorCategoriaController', EventoPorCategoriaController);
 
-function EventoPorCategoriaController($rootScope, eventosService) {
+function EventoPorCategoriaController($scope, $rootScope, eventosService) {
 
     $scope.eventos = {
 			'titulo': '',
@@ -12,10 +14,10 @@ function EventoPorCategoriaController($rootScope, eventosService) {
 			'foto': '',
 			'codigo': ''
 		};
+    
+     listar();
 
-        $scope.listar();
-
-     $scope.listar = function () {
+     function listar() {
         eventosService.selecionarEventos($rootScope.categoriaSelecionada)     // eventosService é um serviço criado para requisições http
             .then(function (response) {
                 $scope.eventos = response.data;
@@ -26,5 +28,10 @@ function EventoPorCategoriaController($rootScope, eventosService) {
             });
     };
 
+    
 
 }
+
+
+
+})();

@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="well container text-center col-md-4 col-md-offset-4">
+    <div class="sumir well container text-center col-md-4 col-md-offset-4">
 
 
         <h2 ng-bind="eventos.titulo"></h2>
@@ -24,7 +24,7 @@
         </figure>
         <div>
             <p>Endereço: {{eventos.endereco}}</p>
-            <p>Data: {{eventos.data}}</p>
+            <p>Data: {{eventos.data | date : "MM/dd/yyyy"}}</p>
             <p>Categoria: {{eventos.categoria}}</p>
             <p>Responsável: {{eventos.responsavel}}</p>
             <p>Código: {{eventos.codigo}} </p>
